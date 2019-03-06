@@ -9,11 +9,11 @@ The user will select 3 of the 5 places where they would be interested in going a
 - Mobile:
   Very useful when deciding on the next place to go during a night out, or when exploring an unfamiliar city
 - Story:
-  Removes the challenge of deciding on a place to go to, removing any indecision
+  Removes the challenge of deciding where to go for the night
 - Market:
   This app appeals to anyone who enjoys going out for the night and trying new things
 - Habit:
-  app will most likely be used once a week on weekends when people are trying to find a new place to go to
+  app will most likely be used once a week on weekends when people are trying to find a new place to go to, or when visiting a new place
 - Scope:
   Focuses on making it easier to decide where to go for the night
 
