@@ -7,7 +7,7 @@ The user will select 3 of the 5 places where they would be interested in going a
 
 ### App Idea Evaluation
 - Mobile:
-  Very useful when deciding on the next place to go to when visiting multiple places, or when exploring an unfamiliar city
+  Very useful when deciding on the next place to go during a night out, or when exploring an unfamiliar city
 - Story:
   Removes the challenge of deciding on a place to go to, removing any indecision
 - Market:
