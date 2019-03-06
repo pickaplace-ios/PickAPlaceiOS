@@ -19,11 +19,25 @@ The user will select 3 of the 5 places where they would be interested in going a
 
 ---
 
-### User Stories
-// TODO: Enumerate User Stories
-1. User can...
+### Required User Stories
+1. User can choose what they are looking for (food, attractions, etc.)
+2. User is given five options
+3. User can choose 3
+4. User is shown one
+5. User can see a detailed description of each location
+5. App can recommend locations to the user based on criteria
+
+### Optional Stories
+1. Settings tab where user can change search parameters
+2. User can set favorites
+3. User can ignore locations already visited
+4. User can message friends the location from within the app
+5. User can see a map and directions to the location
+6. User can refresh recommendations
+7. Add a better looking UI
 
 ---
+
 
 ### Wireframes
 // TODO: Add Wireframe Images
