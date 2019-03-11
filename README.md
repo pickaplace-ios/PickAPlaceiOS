@@ -39,6 +39,28 @@ The user will select 3 of the 5 places where they would be interested in going a
 ---
 
 
+### Screens
+
+#### Navigation Tabs
+
+##### Home
+- Selection Screen to choose which category
+- Location Screen to grab location
+- Radius Screen to grab the user's radius they want to travel
+- Parameters Screen for filtering
+- Selection Screen to show five randomly chosen places
+- Detail Screen to see more details on the five places
+- Chosen Screen to show the reccommended place for the user
+
+##### Preferences
+- User settings for saving parameter settings and favorite places
+
+##### Nearby
+- Nearby Screen which shows all nearby places
+
+---
+
+
 ### Wireframes
 [Link to Basic Wireframe](https://github.com/keithatan/PickAPlaceiOS/blob/master/BasicWireframe.pdf)
 
