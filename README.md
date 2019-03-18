@@ -85,6 +85,9 @@ Businesses
 
 #### Networking
 
+| GET | /businesses | gets all businesses |
+|-----|-------------|---------------------|
+
 ---
 
 ### App Pitch Presentation
