@@ -69,6 +69,7 @@ The user will select 3 of the 5 places where they would be interested in going a
 ---
 #### Models
 Businesses
+
 | Property     | Type    | Desctiption                                 |
 |--------------|---------|---------------------------------------------|
 | objectID     | String  | Unique ID for the location                  |
