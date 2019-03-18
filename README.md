@@ -63,7 +63,6 @@ The user will select 3 of the 5 places where they would be interested in going a
 ### Wireframes
 [Link to Basic Wireframe](https://github.com/keithatan/PickAPlaceiOS/blob/master/BasicWireframe.pdf)
 
----
 
 ### Schema
 ---
