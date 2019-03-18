@@ -60,9 +60,30 @@ The user will select 3 of the 5 places where they would be interested in going a
 
 ---
 
-
 ### Wireframes
 [Link to Basic Wireframe](https://github.com/keithatan/PickAPlaceiOS/blob/master/BasicWireframe.pdf)
+
+---
+
+### Schema
+---
+#### Models
+Businesses
+| Property     | Type    | Desctiption                                 |
+|--------------|---------|---------------------------------------------|
+| objectID     | String  | Unique ID for the location                  |
+| name         | String  | Name of business                            |
+| isClosed     | boolean | is the business currently closed            |
+| phoneNumber  | int     | phone number for business                   |
+| businessType | String  | type of business (restaurant, coffee, etc.) |
+| URL          | URL     | URL of business website                     |
+| image        | URL     | background image for business               |
+| address      | String  | address of business                         |
+| price        | String  | price range of business                     |
+| rating       | int     | rating out of 5 for business                |
+| distance     | double  | distance to business from current location  |
+
+#### Networking
 
 ---
 
