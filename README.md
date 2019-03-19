@@ -85,8 +85,13 @@ Businesses
 
 #### Networking
 
-| GET | /businesses | gets all businesses |
-|-----|-------------|---------------------|
+##### Yelp API
+- Base URL: https://api.yelp.com/v3/
+
+| Type         | URL                 | Description                                 |
+|--------------|---------------------|---------------------------------------------|
+| GET          | /businesses/search  | Gets all businesses                         |
+
 
 ---
 
