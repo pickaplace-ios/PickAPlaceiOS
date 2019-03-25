@@ -12,6 +12,7 @@
 		53C6B85F222DF1E9001A4245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B85D222DF1E9001A4245 /* Main.storyboard */; };
 		53C6B861222DF1EB001A4245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B860222DF1EB001A4245 /* Assets.xcassets */; };
 		53C6B864222DF1EB001A4245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */; };
+		C3CB6DB6E7E7C3A9F1CFA7E1 /* Pods_PickAPlaceiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D009885C4F66742B1AE8672A /* Pods_PickAPlaceiOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		53C6B860222DF1EB001A4245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53C6B863222DF1EB001A4245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53C6B865222DF1EB001A4245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE0AE2A8F4CC57EA7B5F8F66 /* Pods-PickAPlaceiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickAPlaceiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickAPlaceiOS/Pods-PickAPlaceiOS.release.xcconfig"; sourceTree = "<group>"; };
+		C24C0C5ACE447FF19BA9B252 /* Pods-PickAPlaceiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickAPlaceiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PickAPlaceiOS/Pods-PickAPlaceiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D009885C4F66742B1AE8672A /* Pods_PickAPlaceiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickAPlaceiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CB6DB6E7E7C3A9F1CFA7E1 /* Pods_PickAPlaceiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				53C6B858222DF1E9001A4245 /* PickAPlaceiOS */,
 				53C6B857222DF1E9001A4245 /* Products */,
+				72E2C294E43874928D2CE5D3 /* Pods */,
+				976FFBD77CD8F7D4B9D53095 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = PickAPlaceiOS;
 			sourceTree = "<group>";
 		};
+		72E2C294E43874928D2CE5D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C24C0C5ACE447FF19BA9B252 /* Pods-PickAPlaceiOS.debug.xcconfig */,
+				AE0AE2A8F4CC57EA7B5F8F66 /* Pods-PickAPlaceiOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		976FFBD77CD8F7D4B9D53095 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D009885C4F66742B1AE8672A /* Pods_PickAPlaceiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53C6B868222DF1EB001A4245 /* Build configuration list for PBXNativeTarget "PickAPlaceiOS" */;
 			buildPhases = (
+				3789928871F39D118B031132 /* [CP] Check Pods Manifest.lock */,
 				53C6B852222DF1E9001A4245 /* Sources */,
 				53C6B853222DF1E9001A4245 /* Frameworks */,
 				53C6B854222DF1E9001A4245 /* Resources */,
+				DF8ACEDD985A032D9E60A249 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3789928871F39D118B031132 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PickAPlaceiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF8ACEDD985A032D9E60A249 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PickAPlaceiOS/Pods-PickAPlaceiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PickAPlaceiOS/Pods-PickAPlaceiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53C6B852222DF1E9001A4245 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		53C6B869222DF1EB001A4245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C24C0C5ACE447FF19BA9B252 /* Pods-PickAPlaceiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +373,7 @@
 		};
 		53C6B86A222DF1EB001A4245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE0AE2A8F4CC57EA7B5F8F66 /* Pods-PickAPlaceiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
