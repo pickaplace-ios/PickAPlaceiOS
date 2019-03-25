@@ -85,6 +85,13 @@ Businesses
 
 #### Networking
 
+##### Foursquare API
+- Base URL: https://api.foursquare.com/v2/
+
+| Type         | URL                       | Description                                 |
+|--------------|---------------------------|---------------------------------------------|
+| GET          | /search/recommendations/  | Gets events, venues, places in an area      |
+
 ##### Yelp API
 - Base URL: https://api.yelp.com/v3/
 
