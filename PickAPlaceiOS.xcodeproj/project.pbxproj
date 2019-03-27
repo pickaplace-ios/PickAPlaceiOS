@@ -16,6 +16,7 @@
 		53C6B861222DF1EB001A4245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B860222DF1EB001A4245 /* Assets.xcassets */; };
 		53C6B864222DF1EB001A4245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */; };
 		C3CB6DB6E7E7C3A9F1CFA7E1 /* Pods_PickAPlaceiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D009885C4F66742B1AE8672A /* Pods_PickAPlaceiOS.framework */; };
+		EAE2A4A2224C27DF0012A4C5 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE2A4A1224C27DF0012A4C5 /* UserLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		AE0AE2A8F4CC57EA7B5F8F66 /* Pods-PickAPlaceiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickAPlaceiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PickAPlaceiOS/Pods-PickAPlaceiOS.release.xcconfig"; sourceTree = "<group>"; };
 		C24C0C5ACE447FF19BA9B252 /* Pods-PickAPlaceiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickAPlaceiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PickAPlaceiOS/Pods-PickAPlaceiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D009885C4F66742B1AE8672A /* Pods_PickAPlaceiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickAPlaceiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE2A4A1224C27DF0012A4C5 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				5330AE7B224C262600010956 /* Models */,
 				53C6B859222DF1E9001A4245 /* AppDelegate.swift */,
+				EAE2A4A1224C27DF0012A4C5 /* UserLocation.swift */,
 				53C6B85B222DF1E9001A4245 /* ViewController.swift */,
 				53C6B85D222DF1E9001A4245 /* Main.storyboard */,
 				53C6B860222DF1EB001A4245 /* Assets.xcassets */,
@@ -229,6 +232,7 @@
 			files = (
 				5330AE7D224C267500010956 /* Business.swift in Sources */,
 				53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */,
+				EAE2A4A2224C27DF0012A4C5 /* UserLocation.swift in Sources */,
 				3566E0DE224C2590007D49D9 /* categoriesViewController.swift in Sources */,
 				3566E0E0224C2821007D49D9 /* FoodViewController.swift in Sources */,
 				53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */,
