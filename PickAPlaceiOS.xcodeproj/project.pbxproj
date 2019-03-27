@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5330AE7D224C267500010956 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330AE7C224C267500010956 /* Business.swift */; };
+		3566E0DE224C2590007D49D9 /* categoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566E0DD224C2590007D49D9 /* categoriesViewController.swift */; };
 		53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B859222DF1E9001A4245 /* AppDelegate.swift */; };
 		53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B85B222DF1E9001A4245 /* ViewController.swift */; };
 		53C6B85F222DF1E9001A4245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B85D222DF1E9001A4245 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		5330AE7C224C267500010956 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		3566E0DD224C2590007D49D9 /* categoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesViewController.swift; sourceTree = "<group>"; };
 		53C6B856222DF1E9001A4245 /* PickAPlaceiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPlaceiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C6B859222DF1E9001A4245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C6B85B222DF1E9001A4245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				53C6B860222DF1EB001A4245 /* Assets.xcassets */,
 				53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */,
 				53C6B865222DF1EB001A4245 /* Info.plist */,
+				3566E0DD224C2590007D49D9 /* categoriesViewController.swift */,
 			);
 			path = PickAPlaceiOS;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				5330AE7D224C267500010956 /* Business.swift in Sources */,
 				53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */,
+				3566E0DE224C2590007D49D9 /* categoriesViewController.swift in Sources */,
 				53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
