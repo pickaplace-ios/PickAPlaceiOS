@@ -1,17 +1,14 @@
 //
-//  categoriesViewController.swift
+//  FoodViewController.swift
 //  PickAPlaceiOS
 //
 //  Created by Adam Ding on 3/27/19.
 //  Copyright © 2019 keithatan. All rights reserved.
 //
 
-
-//View controller for categoriesViewController on the main storyboard
-
 import UIKit
 
-class categoriesViewController: UIViewController {
+class FoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +16,7 @@ class categoriesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func FoodPressedButton(_ sender: Any) {   //button that goes to food view controller
-    }
-    
+
     /*
     // MARK: - Navigation
 
