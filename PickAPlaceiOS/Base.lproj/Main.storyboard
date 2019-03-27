@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dUe-wg-Cpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdG-SQ-sKx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,6 +85,69 @@
             </objects>
             <point key="canvasLocation" x="889" y="555"/>
         </scene>
+        <!--Categories View Controller-->
+        <scene sceneID="aGD-eO-1Uz">
+            <objects>
+                <viewController id="3e3-Fm-nMs" customClass="categoriesViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DjI-0S-hC3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eod-9U-QBC">
+                                <rect key="frame" x="116" y="147" width="142" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Go to Food">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="FoodPressedButton:" destination="3e3-Fm-nMs" eventType="touchUpInside" id="VMQ-ma-0Pd"/>
+                                    <segue destination="3Bd-am-SBr" kind="show" id="QeY-uh-YR6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eod-9U-QBC" firstAttribute="centerY" secondItem="DjI-0S-hC3" secondAttribute="centerY" constant="-162.5" id="6lV-j8-xb3"/>
+                            <constraint firstItem="eod-9U-QBC" firstAttribute="centerX" secondItem="DjI-0S-hC3" secondAttribute="centerX" id="LN1-hz-kL9"/>
+                            <constraint firstItem="eod-9U-QBC" firstAttribute="leading" secondItem="s13-lS-mdF" secondAttribute="leading" constant="116" id="VDT-J7-lTG"/>
+                            <constraint firstItem="eod-9U-QBC" firstAttribute="top" secondItem="s13-lS-mdF" secondAttribute="top" constant="83" id="kcc-NQ-YZR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s13-lS-mdF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wnj-y6-b1y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VK-Qp-gjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3039.1999999999998" y="-213.64317841079463"/>
+        </scene>
+        <!--Food View Controller-->
+        <scene sceneID="iwb-DS-Qtp">
+            <objects>
+                <viewController id="3Bd-am-SBr" customClass="FoodViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TCe-yH-dYw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FOOD " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvG-ST-Lpa">
+                                <rect key="frame" x="83" y="226" width="209" height="214"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HvG-ST-Lpa" firstAttribute="top" secondItem="4RM-2K-Svp" secondAttribute="top" constant="162" id="FQo-PE-08n"/>
+                            <constraint firstItem="HvG-ST-Lpa" firstAttribute="leading" secondItem="4RM-2K-Svp" secondAttribute="leading" constant="83" id="SSn-Lu-Uyd"/>
+                            <constraint firstItem="HvG-ST-Lpa" firstAttribute="centerY" secondItem="TCe-yH-dYw" secondAttribute="centerY" id="dm7-pd-kK3"/>
+                            <constraint firstItem="HvG-ST-Lpa" firstAttribute="centerX" secondItem="TCe-yH-dYw" secondAttribute="centerX" id="gvf-77-5v8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4RM-2K-Svp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gL-yj-rFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3857" y="-214"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="raJ-nP-Whg">
             <objects>
@@ -103,6 +166,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEa-an-A1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="-212"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c9a-Gc-8cc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BdG-SQ-sKx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nst-ml-Ikb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3e3-Fm-nMs" kind="relationship" relationship="rootViewController" id="rlE-6X-eGZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wH-eo-yVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2100" y="-213.64317841079463"/>
         </scene>
     </scenes>
 </document>
