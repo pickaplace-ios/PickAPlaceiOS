@@ -10,7 +10,7 @@ import Foundation
 
 struct Business: Codable {
     let name: String
-    let rating: String
+    let rating: Double
     let image_url: String
     let phone: String
     let price: String?
