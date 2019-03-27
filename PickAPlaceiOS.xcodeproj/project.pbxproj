@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5330AE7D224C267500010956 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330AE7C224C267500010956 /* Business.swift */; };
 		53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B859222DF1E9001A4245 /* AppDelegate.swift */; };
 		53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B85B222DF1E9001A4245 /* ViewController.swift */; };
 		53C6B85F222DF1E9001A4245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B85D222DF1E9001A4245 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5330AE7C224C267500010956 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		53C6B856222DF1E9001A4245 /* PickAPlaceiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPlaceiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C6B859222DF1E9001A4245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C6B85B222DF1E9001A4245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5330AE7B224C262600010956 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5330AE7C224C267500010956 /* Business.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		53C6B84D222DF1E8001A4245 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 		53C6B858222DF1E9001A4245 /* PickAPlaceiOS */ = {
 			isa = PBXGroup;
 			children = (
+				5330AE7B224C262600010956 /* Models */,
 				53C6B859222DF1E9001A4245 /* AppDelegate.swift */,
 				53C6B85B222DF1E9001A4245 /* ViewController.swift */,
 				53C6B85D222DF1E9001A4245 /* Main.storyboard */,
@@ -210,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5330AE7D224C267500010956 /* Business.swift in Sources */,
 				53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */,
 				53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */,
 			);
