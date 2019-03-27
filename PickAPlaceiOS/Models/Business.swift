@@ -30,5 +30,5 @@ struct Location: Codable {
 }
 
 struct BusinessWrapper: Codable {
-    let results: [Business]
+    let businesses: [Business]
 }
