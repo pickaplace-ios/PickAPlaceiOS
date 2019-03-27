@@ -17,3 +17,7 @@ struct Business: Codable {
     let url: String
 
 }
+
+struct BusinessWrapper: Codable {
+    let results: [Business]
+}
