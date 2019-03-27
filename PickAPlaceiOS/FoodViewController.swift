@@ -14,9 +14,12 @@ class FoodViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    
     }
     
-
+    @IBOutlet weak var restaurantImageView: UIImageView!    //image for restaurant
+    @IBOutlet weak var restaurantNameLabel: UILabel!        //label for restaurant name
+    
     /*
     // MARK: - Navigation
 
