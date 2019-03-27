@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3566E0DE224C2590007D49D9 /* categoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566E0DD224C2590007D49D9 /* categoriesViewController.swift */; };
+		3566E0E0224C2821007D49D9 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566E0DF224C2821007D49D9 /* FoodViewController.swift */; };
 		53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B859222DF1E9001A4245 /* AppDelegate.swift */; };
 		53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B85B222DF1E9001A4245 /* ViewController.swift */; };
 		53C6B85F222DF1E9001A4245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B85D222DF1E9001A4245 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		3566E0DD224C2590007D49D9 /* categoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesViewController.swift; sourceTree = "<group>"; };
+		3566E0DF224C2821007D49D9 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		53C6B856222DF1E9001A4245 /* PickAPlaceiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPlaceiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C6B859222DF1E9001A4245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C6B85B222DF1E9001A4245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */,
 				53C6B865222DF1EB001A4245 /* Info.plist */,
 				3566E0DD224C2590007D49D9 /* categoriesViewController.swift */,
+				3566E0DF224C2821007D49D9 /* FoodViewController.swift */,
 			);
 			path = PickAPlaceiOS;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */,
 				3566E0DE224C2590007D49D9 /* categoriesViewController.swift in Sources */,
+				3566E0E0224C2821007D49D9 /* FoodViewController.swift in Sources */,
 				53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RKH4W68X8Z;
 				INFOPLIST_FILE = PickAPlaceiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RKH4W68X8Z;
 				INFOPLIST_FILE = PickAPlaceiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
