@@ -19,8 +19,9 @@ class categoriesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func FoodPressedButton(_ sender: Any) {   //button that goes to food view controller
-    }
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
     
     /*
     // MARK: - Navigation
