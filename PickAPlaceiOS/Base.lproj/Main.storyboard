@@ -88,32 +88,61 @@
         <!--Categories-->
         <scene sceneID="aGD-eO-1Uz">
             <objects>
-                <viewController title="Categories" id="3e3-Fm-nMs" customClass="categoriesViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Categories" id="3e3-Fm-nMs" customClass="categoriesTableViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DjI-0S-hC3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eod-9U-QBC">
-                                <rect key="frame" x="174" y="305" width="66" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Food">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="FoodPressedButton:" destination="3e3-Fm-nMs" eventType="touchUpInside" id="VMQ-ma-0Pd"/>
-                                    <segue destination="3Bd-am-SBr" kind="show" id="QeY-uh-YR6"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-eT-rft">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="89" id="4jx-wJ-ouS" customClass="FoodCell" customModule="PickAPlaceiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jx-wJ-ouS" id="vyV-p2-Bgp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGs-vO-mIG">
+                                                    <rect key="frame" x="108" y="5" width="95" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GS3-xc-7ph">
+                                                    <rect key="frame" x="20" y="6" width="79" height="76"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="restaurantImage" destination="GS3-xc-7ph" id="ix6-md-N0g"/>
+                                            <outlet property="restaurantNameLabel" destination="mGs-vO-mIG" id="jer-GY-OhY"/>
+                                            <segue destination="3Bd-am-SBr" kind="show" id="rgu-YC-m2G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YAz-eT-rft" firstAttribute="top" secondItem="s13-lS-mdF" secondAttribute="top" id="L06-iW-FVk"/>
+                            <constraint firstItem="YAz-eT-rft" firstAttribute="trailing" secondItem="s13-lS-mdF" secondAttribute="trailing" id="RpT-Qa-mNi"/>
+                            <constraint firstAttribute="bottom" secondItem="YAz-eT-rft" secondAttribute="bottom" id="ZTn-SB-se7"/>
+                            <constraint firstItem="YAz-eT-rft" firstAttribute="leading" secondItem="s13-lS-mdF" secondAttribute="leading" id="eMj-Nl-hZe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="s13-lS-mdF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" id="wnj-y6-b1y"/>
+                    <navigationItem key="navigationItem" title="5 locations" id="wnj-y6-b1y"/>
+                    <connections>
+                        <outlet property="tableView" destination="YAz-eT-rft" id="5Ei-F7-hSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VK-Qp-gjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3039.1999999999998" y="-213.64317841079463"/>
+            <point key="canvasLocation" x="3039.130434782609" y="-214.28571428571428"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="iwb-DS-Qtp">
@@ -163,13 +192,14 @@
                         <viewLayoutGuide key="safeArea" id="4RM-2K-Svp"/>
                     </view>
                     <connections>
+                        <outlet property="priceLabel" destination="4Qd-oK-fV3" id="gKp-89-87D"/>
                         <outlet property="restaurantImageView" destination="QCV-BZ-Gr8" id="Nya-Eg-nD9"/>
                         <outlet property="restaurantNameLabel" destination="Yed-fb-qK4" id="h2t-eK-QHk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gL-yj-rFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3971.0144927536235" y="-792.1875"/>
+            <point key="canvasLocation" x="4014" y="-212"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="raJ-nP-Whg">

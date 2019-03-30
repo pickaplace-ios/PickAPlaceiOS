@@ -12,13 +12,17 @@ class FoodViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        restaurantNameLabel.text = "testing"
+        priceLabel.text = "$$"
+        var dog = UIImage(named: "IMG_0074")
+        restaurantImageView.image = dog
     
     }
     
     @IBOutlet weak var restaurantImageView: UIImageView!    //image for restaurant
     @IBOutlet weak var restaurantNameLabel: UILabel!        //label for restaurant name
+    @IBOutlet weak var priceLabel: UILabel! //label for price
     
     /*
     // MARK: - Navigation
