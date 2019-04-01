@@ -31,5 +31,11 @@ class UserRadiusViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let radius = sender as? Int else {return}
+        guard let vc = segue.destination as? categoriesTableViewController else {return}
+        vc.radius = radius
+    }
+    
 
 }
