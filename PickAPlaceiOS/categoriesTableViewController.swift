@@ -33,7 +33,11 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func retrieveBusinesses(){
-        let url = "QUERY URL"
+        
+        let baseURL = "https://api.yelp.com/v3/businesses/search?"
+        let latitude = UserLocation.getLatitude()
+        let longitude = UserLocation.getLongitude()
+        let url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)"
         
         Alamofire.request(url, headers: ["Authorization": "API_KEY"]).responseJSON { (response) in
             if let error = response.error{
