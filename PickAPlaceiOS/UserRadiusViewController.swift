@@ -19,13 +19,16 @@ class UserRadiusViewController: UIViewController {
     }
     
 
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func submitRadius(_ sender: Any) {
+        let input = radiusTextField.text as String?
+        var radius = Int(input ?? "0")
+        
+        if radius == 0 {
+            // throw an error popup
+        }
+        else {
+            self.performSegue(withIdentifier: "toTable", sender: radius)
+        }
     }
     
 

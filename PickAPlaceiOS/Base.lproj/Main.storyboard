@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YAz-eT-rft">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodCell" rowHeight="89" id="4jx-wJ-ouS" customClass="FoodCell" customModule="PickAPlaceiOS" customModuleProvider="target">
@@ -161,14 +161,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0074" translatesAutoresizingMaskIntoConstraints="NO" id="QCV-BZ-Gr8">
-                                <rect key="frame" x="53.5" y="78" width="307" height="182"/>
+                                <rect key="frame" x="53.5" y="122" width="307" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="182" id="BHt-pQ-E0m"/>
                                     <constraint firstAttribute="width" constant="307" id="OHL-VP-eG5"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qd-oK-fV3">
-                                <rect key="frame" x="314.5" y="267" width="46" height="24"/>
+                                <rect key="frame" x="314.5" y="311" width="46" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yed-fb-qK4">
-                                <rect key="frame" x="53.5" y="267" width="155" height="24"/>
+                                <rect key="frame" x="53.5" y="311" width="155" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -267,7 +267,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6c-Fk-fQa">
                                 <rect key="frame" x="154" y="495" width="107" height="54"/>
@@ -275,7 +275,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <segue destination="3e3-Fm-nMs" kind="presentation" id="6JM-PH-2xa"/>
+                                    <action selector="submitRadius:" destination="AaQ-pb-RZF" eventType="touchUpInside" id="mqe-WO-HzN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -286,6 +286,7 @@
                     <connections>
                         <outlet property="radiusTextField" destination="hsL-m8-gh7" id="VsE-DD-O5B"/>
                         <outlet property="submitButton" destination="B6c-Fk-fQa" id="iy9-ee-QBu"/>
+                        <segue destination="3e3-Fm-nMs" kind="show" identifier="toTable" id="S2L-fk-lnk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oca-vn-GgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
