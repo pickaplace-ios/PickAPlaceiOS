@@ -9,15 +9,17 @@
 import UIKit
 
 class FoodViewController: UIViewController {
+    
+    var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        restaurantNameLabel.text = "testing"
-        priceLabel.text = "$$"
-        var dog = UIImage(named: "IMG_0074")
-        restaurantImageView.image = dog
-    
+        restaurantNameLabel.text = business.name
+        priceLabel.text = business.price
+        let imageURL = URL(string: business.image_url)
+        restaurantImageView.af_setImage(withURL: imageURL!)
+        
     }
     
     @IBOutlet weak var restaurantImageView: UIImageView!    //image for restaurant
