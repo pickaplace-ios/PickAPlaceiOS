@@ -85,5 +85,32 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         //Change the selected background view of the cell.
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // Identify selected movie cell
+        let cell = sender as! UITableViewCell
+        
+        // Gets the index of that cell because the tableview knows the index for a cell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let business = businesses[indexPath.row]
+        
+        // Identify the destination
+        // Must cast because the destination is a generic VC
+        let foodDetailViewController = segue.destination as! FoodViewController
+        
+        // Bundle the movie information to the next screen
+        
+        foodDetailViewController.business = business;
+        
+        // Deselect while traveling to the next screen
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
 
 }
