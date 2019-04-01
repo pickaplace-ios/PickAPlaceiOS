@@ -21,7 +21,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        self.tableView.rowHeight = (screenHeight - navBarHeight) / 5    //allows for rows to be evenly spread-out throughout the screen even with the nav bar
+        self.tableView.rowHeight = tableView.frame.height / 5
         self.retrieveBusinesses()
     }
 
@@ -53,6 +53,20 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
                 let jsonDecoder = JSONDecoder()
                 let wrapper = try jsonDecoder.decode(BusinessWrapper.self, from: data)
                 self.businesses = wrapper.businesses
+                
+                var repeats: [Int: Bool] = [:]
+                while repeats.count != 5 {  //gets 5 indexes for 5 random restaurants
+                    let random = Int.random(in: 0 ..< self.businesses.count)
+                    if repeats[random] == nil {
+                        repeats[random] = true
+                    }
+                }
+                let keys = Array(repeats.keys)  //gets the keys from the dictionary
+                var temp = [Business]()         //hold the Business from the 5 keys
+                for i in 0 ..< 5 {
+                    temp.append(self.businesses[keys[i]])
+                }
+                self.businesses = temp
                 self.tableView.reloadData()
             } catch {
                 print(error)
