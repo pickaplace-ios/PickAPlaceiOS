@@ -20,12 +20,14 @@ The user will select 3 of the 5 places where they would be interested in going a
 ---
 
 ### Required User Stories
-1. User can choose what they are looking for (food, attractions, etc.)
-2. User is given five options
-3. User can choose 3
-4. User is shown one
-5. User can see a detailed description of each location
-5. App can recommend locations to the user based on criteria
+- [ ] User can choose what they are looking for (food, attractions, etc.)
+- [ ] User is given five options
+- [ ] User can choose 3
+- [ ] User can see a detailed description of each location
+- [X] App can retrieve user location
+- [ ] App can recommend locations to the user based on criteria
+- [X] App can use external APIs
+
 
 ### Optional Stories
 1. Settings tab where user can change search parameters
