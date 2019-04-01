@@ -200,6 +200,7 @@
                         <viewLayoutGuide key="safeArea" id="4RM-2K-Svp"/>
                     </view>
                     <connections>
+                        <outlet property="locationLabel" destination="nxt-dZ-RTu" id="cMB-eE-2fa"/>
                         <outlet property="priceLabel" destination="4Qd-oK-fV3" id="gKp-89-87D"/>
                         <outlet property="restaurantImageView" destination="QCV-BZ-Gr8" id="Nya-Eg-nD9"/>
                         <outlet property="restaurantNameLabel" destination="Yed-fb-qK4" id="h2t-eK-QHk"/>

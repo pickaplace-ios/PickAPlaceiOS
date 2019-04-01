@@ -19,9 +19,11 @@ class FoodViewController: UIViewController {
         priceLabel.text = business.price
         let imageURL = URL(string: business.image_url)
         restaurantImageView.af_setImage(withURL: imageURL!)
+        locationLabel.text = "\(business.location.address1), \(business.location.city), \(business.location.state)"
         
     }
     
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var restaurantImageView: UIImageView!    //image for restaurant
     @IBOutlet weak var restaurantNameLabel: UILabel!        //label for restaurant name
     @IBOutlet weak var priceLabel: UILabel! //label for price
