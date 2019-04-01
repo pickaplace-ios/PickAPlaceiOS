@@ -23,9 +23,11 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>Will you allow this app to always know your location?</string>
+    <string>Allow PickAPlace to access your location?</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Allow PickAPlace to access your location?</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Do you allow this app to know your current location?</string>
+    <string>Allow PickAPlace to access your location?</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
