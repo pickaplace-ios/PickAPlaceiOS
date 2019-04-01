@@ -29,6 +29,9 @@
                                 <rect key="frame" x="168" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BdG-SQ-sKx" kind="presentation" id="XVo-6b-WeE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VK-Qp-gjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3039.130434782609" y="-214.28571428571428"/>
+            <point key="canvasLocation" x="135" y="1994"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="iwb-DS-Qtp">
@@ -204,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gL-yj-rFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4014" y="-212"/>
+            <point key="canvasLocation" x="1214" y="1994"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="raJ-nP-Whg">
@@ -241,7 +244,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wH-eo-yVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-213.64317841079463"/>
+            <point key="canvasLocation" x="135" y="1294"/>
         </scene>
     </scenes>
     <resources>
