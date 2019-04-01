@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AlamofireImage
+import Alamofire
 
-class categoriesTableViewController: UIViewController, UITableViewDataSource {
+class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var businesses = [Business]();
 
     @IBOutlet weak var tableView: UITableView!
     let navBarHeight = UIApplication.shared.statusBarFrame.size.height  //gets navigation bars height
@@ -16,7 +20,9 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         self.tableView.rowHeight = (screenHeight - navBarHeight) / 5    //allows for rows to be evenly spread-out throughout the screen even with the nav bar
+        self.retrieveBusinesses()
     }
 
     // MARK: - Table view data source
@@ -25,19 +31,45 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
+    
+    func retrieveBusinesses(){
+        let url = "QUERY URL"
+        
+        Alamofire.request(url, headers: ["Authorization": "API_KEY"]).responseJSON { (response) in
+            if let error = response.error{
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let data = response.data else {
+                return
+            }
+            
+            do {
+                let jsonDecoder = JSONDecoder()
+                let wrapper = try jsonDecoder.decode(BusinessWrapper.self, from: data)
+                self.businesses = wrapper.businesses
+                self.tableView.reloadData()
+            } catch {
+                print(error)
+            }
+        }
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return businesses.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath) as! FoodCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell") as! FoodCell
+        let business = businesses[indexPath.row]
+
+        cell.restaurantNameLabel.text = business.name
+        let imageURL = URL(string: business.image_url)
+        cell.restaurantImage.af_setImage(withURL: imageURL!)
         
-        cell.restaurantNameLabel.text = "Testing"
-        let dog = UIImage(named: "IMG_0074")
-        cell.restaurantImage.image = dog
         return cell
     }
     
@@ -52,6 +84,33 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Change the selected background view of the cell.
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // Identify selected movie cell
+        let cell = sender as! UITableViewCell
+        
+        // Gets the index of that cell because the tableview knows the index for a cell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let business = businesses[indexPath.row]
+        
+        // Identify the destination
+        // Must cast because the destination is a generic VC
+        let foodDetailViewController = segue.destination as! FoodViewController
+        
+        // Bundle the movie information to the next screen
+        
+        foodDetailViewController.business = business;
+        
+        // Deselect while traveling to the next screen
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 
 }

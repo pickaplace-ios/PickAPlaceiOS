@@ -1,27 +1,22 @@
 //
-//  HomeViewController.swift
+//  FiveOptionsViewController.swift
 //  PickAPlaceiOS
 //
-//  Created by Keith Tan on 3/30/19.
+//  Created by Keith Tan on 3/31/19.
 //  Copyright © 2019 keithatan. All rights reserved.
 //
 
 import UIKit
-import CoreLocation
-class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
-    var locationManager:CLLocationManager = CLLocationManager()
-    
+class FiveOptionsViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UserLocation.getLongitude())
 
         // Do any additional setup after loading the view.
     }
+    
 
-    @IBAction func chooseFood(_ sender: Any) {
-        
-    }
     /*
     // MARK: - Navigation
 
