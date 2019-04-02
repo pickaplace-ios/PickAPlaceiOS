@@ -12,19 +12,28 @@ class UserRadiusViewController: UIViewController {
     @IBOutlet weak var radiusTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
+    let alertController = UIAlertController(title: "Error", message: "Invalid Radius. Please input a new distance", preferredStyle: .alert)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        // handle cancel response here. Doing nothing will dismiss the view.
+    }
+    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        alertController.addAction(cancelAction)
+        alertController.addAction(OKAction)
     }
     
 
     @IBAction func submitRadius(_ sender: Any) {
         let input = radiusTextField.text as String?
-        var radius = Int(input ?? "0")
+        let radius = Int(input ?? "0")
         
-        if radius == 0 {
-            // throw an error popup
+        if radius == 0 || radius == nil {
+            present(alertController, animated: true) {
+                self.radiusTextField.text = "";
+            }
         }
         else {
             self.performSegue(withIdentifier: "toTable", sender: radius)

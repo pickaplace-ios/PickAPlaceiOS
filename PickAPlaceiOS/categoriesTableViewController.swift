@@ -13,6 +13,7 @@ import Alamofire
 class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var businesses = [Business]();
+    var radius = 0;
 
     @IBOutlet weak var tableView: UITableView!
     let navBarHeight = UIApplication.shared.statusBarFrame.size.height  //gets navigation bars height
@@ -37,7 +38,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         let baseURL = "https://api.yelp.com/v3/businesses/search?"
         let latitude = UserLocation.getLatitude()
         let longitude = UserLocation.getLongitude()
-        let url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)"
+        let url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)&distance=\(self.radius)"
         
         Alamofire.request(url, headers: ["Authorization": "API_KEY"]).responseJSON { (response) in
             if let error = response.error{
