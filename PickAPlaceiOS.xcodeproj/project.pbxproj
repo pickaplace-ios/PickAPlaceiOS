@@ -57,6 +57,7 @@
 		5330AE7B224C262600010956 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EAE2A4A1224C27DF0012A4C5 /* UserLocation.swift */,
 				5330AE7C224C267500010956 /* Business.swift */,
 			);
 			path = Models;
@@ -83,21 +84,52 @@
 		53C6B858222DF1E9001A4245 /* PickAPlaceiOS */ = {
 			isa = PBXGroup;
 			children = (
+				53D569A82254551400D110E5 /* Storyboards */,
+				53D569A62254549400D110E5 /* Controllers */,
+				53D569A52254548400D110E5 /* Support Files */,
 				5330AE7B224C262600010956 /* Models */,
-				53C6B859222DF1E9001A4245 /* AppDelegate.swift */,
-				EAE2A4A1224C27DF0012A4C5 /* UserLocation.swift */,
 				53C6B85B222DF1E9001A4245 /* ViewController.swift */,
-				5335C388225027E600683B7B /* HomeViewController.swift */,
-				53C6B85D222DF1E9001A4245 /* Main.storyboard */,
-				53D569A32252C90600D110E5 /* UserRadiusViewController.swift */,
-				53C6B860222DF1EB001A4245 /* Assets.xcassets */,
-				53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */,
-				53C6B865222DF1EB001A4245 /* Info.plist */,
-				3566E0DF224C2821007D49D9 /* FoodViewController.swift */,
-				35E50B9D224EAEE0007DC038 /* FoodCell.swift */,
-				35E29030224ED05900AFBF2F /* categoriesTableViewController.swift */,
 			);
 			path = PickAPlaceiOS;
+			sourceTree = "<group>";
+		};
+		53D569A52254548400D110E5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				53C6B859222DF1E9001A4245 /* AppDelegate.swift */,
+				53C6B865222DF1EB001A4245 /* Info.plist */,
+				53C6B860222DF1EB001A4245 /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		53D569A62254549400D110E5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53D569A7225454DD00D110E5 /* Food */,
+				35E29030224ED05900AFBF2F /* categoriesTableViewController.swift */,
+				5335C388225027E600683B7B /* HomeViewController.swift */,
+				53D569A32252C90600D110E5 /* UserRadiusViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		53D569A7225454DD00D110E5 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				35E50B9D224EAEE0007DC038 /* FoodCell.swift */,
+				3566E0DF224C2821007D49D9 /* FoodViewController.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		53D569A82254551400D110E5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				53C6B85D222DF1E9001A4245 /* Main.storyboard */,
+				53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		72E2C294E43874928D2CE5D3 /* Pods */ = {
