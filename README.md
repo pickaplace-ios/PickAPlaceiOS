@@ -25,7 +25,7 @@ The user will select 3 of the 5 places where they would be interested in going a
 - [ ] User can choose 3
 - [X] User can see a detailed description of each location
 - [X] App can retrieve user location
-- [ ] App can recommend locations to the user based on criteria
+- [X] App can recommend locations to the user based on criteria
 - [X] App can use external APIs
 
 
