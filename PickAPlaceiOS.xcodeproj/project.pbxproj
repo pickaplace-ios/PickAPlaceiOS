@@ -13,7 +13,6 @@
 		5330AE7D224C267500010956 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330AE7C224C267500010956 /* Business.swift */; };
 		5335C389225027E600683B7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335C388225027E600683B7B /* HomeViewController.swift */; };
 		53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B859222DF1E9001A4245 /* AppDelegate.swift */; };
-		53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B85B222DF1E9001A4245 /* ViewController.swift */; };
 		53C6B85F222DF1E9001A4245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B85D222DF1E9001A4245 /* Main.storyboard */; };
 		53C6B861222DF1EB001A4245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B860222DF1EB001A4245 /* Assets.xcassets */; };
 		53C6B864222DF1EB001A4245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C6B862222DF1EB001A4245 /* LaunchScreen.storyboard */; };
@@ -30,7 +29,6 @@
 		5335C388225027E600683B7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		53C6B856222DF1E9001A4245 /* PickAPlaceiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPlaceiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C6B859222DF1E9001A4245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53C6B85B222DF1E9001A4245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		53C6B85E222DF1E9001A4245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53C6B860222DF1EB001A4245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53C6B863222DF1EB001A4245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +86,6 @@
 				53D569A62254549400D110E5 /* Controllers */,
 				53D569A52254548400D110E5 /* Support Files */,
 				5330AE7B224C262600010956 /* Models */,
-				53C6B85B222DF1E9001A4245 /* ViewController.swift */,
 			);
 			path = PickAPlaceiOS;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5330AE7D224C267500010956 /* Business.swift in Sources */,
-				53C6B85C222DF1E9001A4245 /* ViewController.swift in Sources */,
 				35E50B9E224EAEE0007DC038 /* FoodCell.swift in Sources */,
 				5335C389225027E600683B7B /* HomeViewController.swift in Sources */,
 				EAE2A4A2224C27DF0012A4C5 /* UserLocation.swift in Sources */,
@@ -428,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKH4W68X8Z;
-				INFOPLIST_FILE = PickAPlaceiOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PickAPlaceiOS/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RKH4W68X8Z;
-				INFOPLIST_FILE = PickAPlaceiOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PickAPlaceiOS/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

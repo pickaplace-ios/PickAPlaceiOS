@@ -10,10 +10,31 @@ import UIKit
 import AlamofireImage
 import Alamofire
 
-class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FoodCellDelegate
+ {
     
     var businesses = [Business]();
     var radius = 0;
+    var chosen = [FoodCell]();
+    
+    func didselectRestaurant(cell:FoodCell) {
+        if (chosen.contains(cell) == true){
+            let index = chosen.index(of:cell)
+            chosen.remove(at: index!)
+            cell.deselectCell()
+        }
+        else {
+            if (chosen.count < 3){
+                cell.selectCell()
+                chosen.append(cell)
+            }
+            else {
+                // popup alert here
+                cell.deselectCell()
+            }
+        }
+    }
+
 
     @IBOutlet weak var tableView: UITableView!
     let navBarHeight = UIApplication.shared.statusBarFrame.size.height  //gets navigation bars height
@@ -84,6 +105,8 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoodCell") as! FoodCell
         let business = businesses[indexPath.row]
+        
+        cell.delegate = self
 
         cell.restaurantNameLabel.text = business.name
         let imageURL = URL(string: business.image_url)

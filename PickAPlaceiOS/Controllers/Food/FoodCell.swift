@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol FoodCellDelegate: class {
+    func didselectRestaurant(cell:FoodCell)
+}
+
 class FoodCell: UITableViewCell {
+    
+    weak var delegate: FoodCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,6 +23,18 @@ class FoodCell: UITableViewCell {
 
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var restaurantImage: UIImageView!
+    
+    @IBAction func selectRestaurant(_ sender: Any) {
+        delegate?.didselectRestaurant(cell: self)
+    }
+    
+    func selectCell(){
+        self.contentView.backgroundColor = UIColor.lightGray;
+    }
+    
+    func deselectCell(){
+        self.contentView.backgroundColor = UIColor.white;
+    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
