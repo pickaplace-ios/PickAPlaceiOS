@@ -15,6 +15,8 @@ protocol FoodCellDelegate: class {
 class FoodCell: UITableViewCell {
     
     weak var delegate: FoodCellDelegate?
+    
+    var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""))
 
     override func awakeFromNib() {
         super.awakeFromNib()

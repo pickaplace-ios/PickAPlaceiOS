@@ -107,7 +107,8 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         let business = businesses[indexPath.row]
         
         cell.delegate = self
-
+        
+        cell.business = business
         cell.restaurantNameLabel.text = business.name
         let imageURL = URL(string: business.image_url)
         cell.restaurantImage.af_setImage(withURL: imageURL!)
@@ -128,30 +129,52 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func chooseDestination() -> Business{
+        let number = Int.random(in: 0 ... 2)
+        return chosen[number].business
+    }
+    
+    @IBAction func submitChoices(_ sender: Any) {
+        if (chosen.count < 3){
+            // popup error goes here
+        }
+        else {
+            self.performSegue(withIdentifier: "submitSegue", sender: radius)
+        }
+    }
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if (segue.identifier == "submitSegue"){
+            let cellBusiness = chooseDestination()
+            let chosenViewController = segue.destination as! ChosenViewController
+            chosenViewController.business = cellBusiness
+            
+        }
+        else {
+            // Get the new view controller using segue.destination.
+            // Pass the selected object to the new view controller.
+            
+            // Identify selected movie cell
+            let cell = sender as! UITableViewCell
+            
+            // Gets the index of that cell because the tableview knows the index for a cell
+            let indexPath = tableView.indexPath(for: cell)!
+            
+            let business = businesses[indexPath.row]
+            
+            // Identify the destination
+            // Must cast because the destination is a generic VC
+            let foodDetailViewController = segue.destination as! FoodViewController
+            
+            // Bundle the movie information to the next screen
+            
+            foodDetailViewController.business = business;
+            
+            // Deselect while traveling to the next screen
+            
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
         
-        // Identify selected movie cell
-        let cell = sender as! UITableViewCell
-        
-        // Gets the index of that cell because the tableview knows the index for a cell
-        let indexPath = tableView.indexPath(for: cell)!
-        
-        let business = businesses[indexPath.row]
-        
-        // Identify the destination
-        // Must cast because the destination is a generic VC
-        let foodDetailViewController = segue.destination as! FoodViewController
-        
-        // Bundle the movie information to the next screen
-        
-        foodDetailViewController.business = business;
-        
-        // Deselect while traveling to the next screen
-        
-        tableView.deselectRow(at: indexPath, animated: true)
         
     }
 
