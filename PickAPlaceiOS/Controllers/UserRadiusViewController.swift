@@ -12,6 +12,8 @@ class UserRadiusViewController: UIViewController {
     @IBOutlet weak var radiusTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
+    var params = [String]()
+    
     let alertController = UIAlertController(title: "Error", message: "Invalid Radius. Please input a new distance", preferredStyle: .alert)
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         // handle cancel response here. Doing nothing will dismiss the view.
@@ -44,6 +46,7 @@ class UserRadiusViewController: UIViewController {
         guard let radius = sender as? Int else {return}
         guard let vc = segue.destination as? categoriesTableViewController else {return}
         vc.radius = radius
+        vc.params = self.params
     }
     
 

@@ -16,6 +16,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
     var businesses = [Business]();
     var radius = 0;
     var chosen = [FoodCell]();
+    var params = [String]();
     
     func didselectRestaurant(cell:FoodCell) {
         if (chosen.contains(cell) == true){
@@ -59,7 +60,11 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         let baseURL = "https://api.yelp.com/v3/businesses/search?"
         let latitude = UserLocation.getLatitude()
         let longitude = UserLocation.getLongitude()
-        let url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)&distance=\(self.radius)"
+        var url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)&distance=\(self.radius)"
+        
+        for i in 0..<params.count {
+            url = url + "&\(params[i])"
+        }
         
         Alamofire.request(url, headers: ["Authorization": "API_KEY"]).responseJSON { (response) in
             if let error = response.error{
