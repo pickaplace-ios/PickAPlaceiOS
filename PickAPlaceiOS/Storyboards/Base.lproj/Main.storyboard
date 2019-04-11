@@ -368,7 +368,7 @@
                     <navigationItem key="navigationItem" id="fil-gc-zky"/>
                     <connections>
                         <outlet property="priceSegControl" destination="Ugh-z5-kn1" id="gPA-he-Afa"/>
-                        <segue destination="AaQ-pb-RZF" kind="show" id="23a-gf-XN3"/>
+                        <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="23a-gf-XN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mty-Uw-3Qz" userLabel="First Responder" sceneMemberID="firstResponder"/>

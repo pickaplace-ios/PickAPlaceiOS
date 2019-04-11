@@ -9,6 +9,8 @@
 import UIKit
 
 class FoodParametersViewController: UIViewController {
+    
+    var params = [String]()
 
     @IBOutlet weak var priceSegControl: UISegmentedControl!
     override func viewDidLoad() {
@@ -18,34 +20,33 @@ class FoodParametersViewController: UIViewController {
     }
     
     func grabPrice() {
-        var param = ""
         if (priceSegControl.selectedSegmentIndex == 0){
-            param = "price=1"
+            params.append("price=1")
         }
         else if (priceSegControl.selectedSegmentIndex == 1){
-            param = "price=1,2"
+            params.append("price=1,2")
         }
         else if (priceSegControl.selectedSegmentIndex == 2){
-            param = "price=1,2,3"
+            params.append("price=1,2,3")
         }
         else {
-            param = "price=1,2,3,4"
+            params.append("price=1,2,3,4")
         }
     }
     
 
     @IBAction func submitParameters(_ sender: Any) {
+        grabPrice()
         
+        self.performSegue(withIdentifier: "toRadius", sender: params)
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let params = sender as? [String] else {return}
+        guard let vc = segue.destination as? UserRadiusViewController else {return}
+        vc.params = self.params
     }
-    */
+    
 
 }
