@@ -10,6 +10,7 @@ import UIKit
 
 class FoodParametersViewController: UIViewController {
 
+    @IBOutlet weak var priceSegControl: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +18,22 @@ class FoodParametersViewController: UIViewController {
     }
     
 
+    @IBAction func submitParameters(_ sender: Any) {
+        var param = ""
+        if (priceSegControl.selectedSegmentIndex == 0){
+            param = "price=1"
+        }
+        else if (priceSegControl.selectedSegmentIndex == 1){
+            param = "price=1,2"
+        }
+        else if (priceSegControl.selectedSegmentIndex == 2){
+            param = "price=1,2,3"
+        }
+        else {
+            param = "price=1,2,3,4"
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
