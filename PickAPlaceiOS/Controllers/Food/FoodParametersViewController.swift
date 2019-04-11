@@ -17,8 +17,7 @@ class FoodParametersViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func submitParameters(_ sender: Any) {
+    func grabPrice() {
         var param = ""
         if (priceSegControl.selectedSegmentIndex == 0){
             param = "price=1"
@@ -32,6 +31,11 @@ class FoodParametersViewController: UIViewController {
         else {
             param = "price=1,2,3,4"
         }
+    }
+    
+
+    @IBAction func submitParameters(_ sender: Any) {
+        
         
     }
     /*
