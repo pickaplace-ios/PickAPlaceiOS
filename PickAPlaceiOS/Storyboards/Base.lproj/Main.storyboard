@@ -365,7 +365,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lPW-aj-Xat"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fil-gc-zky"/>
+                    <navigationItem key="navigationItem" id="fil-gc-zky">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xSc-Q0-k2c"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="priceSegControl" destination="Ugh-z5-kn1" id="gPA-he-Afa"/>
                         <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="23a-gf-XN3"/>
