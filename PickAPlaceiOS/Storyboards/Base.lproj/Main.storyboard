@@ -354,7 +354,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsL-mn-9zx">
-                                <rect key="frame" x="184" y="731" width="46" height="30"/>
+                                <rect key="frame" x="184" y="282" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -365,7 +365,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lPW-aj-Xat"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fil-gc-zky"/>
+                    <navigationItem key="navigationItem" id="fil-gc-zky">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xSc-Q0-k2c"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="priceSegControl" destination="Ugh-z5-kn1" id="gPA-he-Afa"/>
                         <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="23a-gf-XN3"/>
