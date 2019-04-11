@@ -22,7 +22,8 @@ The user will select 3 of the 5 places where they would be interested in going a
 ### Required User Stories
 - [X] User can choose what they are looking for (food, attractions, etc.)
 - [X] User is given five options
-- [ ] User can choose 3
+- [X] User can choose 3
+- [X] User is shown the detailed place
 - [X] User can see a detailed description of each location
 - [X] App can retrieve user location
 - [X] App can recommend locations to the user based on criteria
