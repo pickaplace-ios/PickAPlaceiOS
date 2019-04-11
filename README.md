@@ -31,13 +31,13 @@ The user will select 3 of the 5 places where they would be interested in going a
 
 
 ### Optional Stories
-1. Settings tab where user can change search parameters
-2. User can set favorites
-3. User can ignore locations already visited
-4. User can message friends the location from within the app
-5. User can see a map and directions to the location
-6. User can refresh recommendations
-7. Add a better looking UI
+- [X] User can change search parameters
+- [ ] User can set favorites
+- [ ] User can ignore locations already visited
+- [ ] User can message friends the location from within the app
+- [ ] User can see a map and directions to the location
+- [ ] User can refresh recommendations
+- [ ] Add a better looking UI
 
 ---
 
