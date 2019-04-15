@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dUe-wg-Cpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dUe-wg-Cpa">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="Ucq-t0-gtb">
             <objects>
                 <viewController id="cFU-jy-7QW" customClass="HomeViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,18 +30,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="BdG-SQ-sKx" kind="presentation" id="XVo-6b-WeE"/>
+                                    <segue destination="4EB-CA-ik3" kind="show" id="ivz-WW-MzV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Fh0-6r-HLm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="LB9-MD-2xC"/>
+                    <navigationItem key="navigationItem" id="l9P-26-uwd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcH-VM-ISP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="555"/>
+            <point key="canvasLocation" x="872" y="554"/>
         </scene>
         <!--View-->
         <scene sceneID="rWZ-6x-lz5">
@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R49-eC-uxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="555"/>
+            <point key="canvasLocation" x="1580" y="554"/>
         </scene>
         <!--Categories-->
         <scene sceneID="aGD-eO-1Uz">
@@ -263,7 +263,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="esg-c7-A27" kind="relationship" relationship="viewControllers" id="e5b-of-6kr"/>
-                        <segue destination="cFU-jy-7QW" kind="relationship" relationship="viewControllers" id="fXd-fD-4bY"/>
+                        <segue destination="b35-pZ-wbq" kind="relationship" relationship="viewControllers" id="fXd-fD-4bY"/>
                         <segue destination="yGp-kJ-Pip" kind="relationship" relationship="viewControllers" id="Tvl-vZ-k8D"/>
                     </connections>
                 </tabBarController>
@@ -377,8 +377,30 @@
             </objects>
             <point key="canvasLocation" x="135" y="1994"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="g1n-Lt-RD9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b35-pZ-wbq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="LB9-MD-2xC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WA8-PL-tdZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cFU-jy-7QW" kind="relationship" relationship="rootViewController" id="DUZ-VW-xKp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VSt-1o-OPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="554.46428571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="IMG_0074" width="3024" height="4032"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ivz-WW-MzV"/>
+    </inferredMetricsTieBreakers>
 </document>
