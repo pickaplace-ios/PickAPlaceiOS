@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     var window: UIWindow?
     let locationManager = CLLocationManager()
+    let alertController = UIAlertController(title: "Error", message: "There was a problem retrieving the location. Please make sure that location services are enabled.", preferredStyle: .alert)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        // handle cancel response here. Doing nothing will dismiss the view.
+    }
+    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
+        alertController.addAction(cancelAction)
+        alertController.addAction(OKAction)
         determineMyCurrentLocation()
         
     }
@@ -59,7 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
@@ -81,7 +88,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {
-        print("Error \(error)")
+        print("error")
+        UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true) {
+            self.locationManager.requestWhenInUseAuthorization()
+        }
     }
     
 }
