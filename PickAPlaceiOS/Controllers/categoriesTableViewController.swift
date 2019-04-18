@@ -66,7 +66,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
             url = url + "&\(params[i])"
         }
         
-        Alamofire.request(url, headers: ["Authorization": "API-KEY"]).responseJSON { (response) in
+        Alamofire.request(url, headers: ["Authorization": "API_KEY"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return
@@ -153,7 +153,6 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
             let cellBusiness = chooseDestination()
             let chosenViewController = segue.destination as! ChosenViewController
             chosenViewController.business = cellBusiness
-            
         }
         else {
             // Get the new view controller using segue.destination.
