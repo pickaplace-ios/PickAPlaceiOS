@@ -66,7 +66,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
             url = url + "&\(params[i])"
         }
         
-        Alamofire.request(url, headers: ["Authorization": "API_KEY"]).responseJSON { (response) in
+        Alamofire.request(url, headers: ["Authorization": "API-KEY"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return
