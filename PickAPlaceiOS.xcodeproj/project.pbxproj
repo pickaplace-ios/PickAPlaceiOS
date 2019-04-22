@@ -15,6 +15,7 @@
 		35E50B9E224EAEE0007DC038 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E50B9D224EAEE0007DC038 /* FoodCell.swift */; };
 		5330AE7D224C267500010956 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330AE7C224C267500010956 /* Business.swift */; };
 		5335C389225027E600683B7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335C388225027E600683B7B /* HomeViewController.swift */; };
+		535D452D226E371300C09B2D /* HotelsParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535D452C226E371300C09B2D /* HotelsParameterViewController.swift */; };
 		536FBA32225C0C4E00D1D68F /* ChosenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FBA31225C0C4E00D1D68F /* ChosenViewController.swift */; };
 		536FBA34225ED12400D1D68F /* FoodParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FBA33225ED12400D1D68F /* FoodParametersViewController.swift */; };
 		53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6B859222DF1E9001A4245 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		35E50B9D224EAEE0007DC038 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 		5330AE7C224C267500010956 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		5335C388225027E600683B7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		535D452C226E371300C09B2D /* HotelsParameterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HotelsParameterViewController.swift; path = PickAPlaceiOS/Controllers/HotelsParameterViewController.swift; sourceTree = SOURCE_ROOT; };
 		536FBA31225C0C4E00D1D68F /* ChosenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChosenViewController.swift; path = PickAPlaceiOS/Controllers/ChosenViewController.swift; sourceTree = SOURCE_ROOT; };
 		536FBA33225ED12400D1D68F /* FoodParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoodParametersViewController.swift; path = PickAPlaceiOS/Controllers/Food/FoodParametersViewController.swift; sourceTree = SOURCE_ROOT; };
 		53C6B856222DF1E9001A4245 /* PickAPlaceiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickAPlaceiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				536FBA31225C0C4E00D1D68F /* ChosenViewController.swift */,
 				350C3064226929AD00434A88 /* nearByViewController.swift */,
 				350C306622692CC300434A88 /* nearByCell.swift */,
+				535D452C226E371300C09B2D /* HotelsParameterViewController.swift */,
 				35CDF1D4226419EF00973DCE /* Bars */,
 				53D569A7225454DD00D110E5 /* Food */,
 				35E29030224ED05900AFBF2F /* categoriesTableViewController.swift */,
@@ -300,6 +303,7 @@
 				5335C389225027E600683B7B /* HomeViewController.swift in Sources */,
 				EAE2A4A2224C27DF0012A4C5 /* UserLocation.swift in Sources */,
 				536FBA32225C0C4E00D1D68F /* ChosenViewController.swift in Sources */,
+				535D452D226E371300C09B2D /* HotelsParameterViewController.swift in Sources */,
 				3566E0E0224C2821007D49D9 /* FoodViewController.swift in Sources */,
 				53D569A42252C90600D110E5 /* UserRadiusViewController.swift in Sources */,
 				53C6B85A222DF1E9001A4245 /* AppDelegate.swift in Sources */,

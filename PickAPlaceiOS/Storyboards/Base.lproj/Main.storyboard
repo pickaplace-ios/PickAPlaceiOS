@@ -408,17 +408,39 @@
             </objects>
             <point key="canvasLocation" x="-433" y="1278"/>
         </scene>
-        <!--View Controller-->
+        <!--Hotels Parameter View Controller-->
         <scene sceneID="Q3I-AI-gNF">
             <objects>
-                <viewController id="7L6-vj-W8m" sceneMemberID="viewController">
+                <viewController id="7L6-vj-W8m" customClass="HotelsParameterViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MBY-UI-wSz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-X1-IDz">
+                                <rect key="frame" x="184" y="592" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submit:" destination="7L6-vj-W8m" eventType="touchUpInside" id="98Q-MV-Vqn"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wfI-Z8-24M">
+                                <rect key="frame" x="147" y="211" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2vx-kP-iH7"/>
                     </view>
                     <navigationItem key="navigationItem" id="RKk-Fk-Thr"/>
+                    <connections>
+                        <outlet property="priceSegControl" destination="wfI-Z8-24M" id="NOF-xF-i45"/>
+                        <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="zhQ-5Q-jpS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8q-fm-6JZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -663,6 +685,6 @@
         <image name="restaurant selection image" width="291" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0lz-Ma-KpT"/>
+        <segue reference="zhQ-5Q-jpS"/>
     </inferredMetricsTieBreakers>
 </document>
