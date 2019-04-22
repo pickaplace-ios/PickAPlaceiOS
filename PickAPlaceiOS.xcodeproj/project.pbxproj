@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350C3065226929AD00434A88 /* nearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C3064226929AD00434A88 /* nearByViewController.swift */; };
+		350C306722692CC300434A88 /* nearByCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C306622692CC300434A88 /* nearByCell.swift */; };
 		3566E0E0224C2821007D49D9 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566E0DF224C2821007D49D9 /* FoodViewController.swift */; };
 		35CDF1D622641AA700973DCE /* BarParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CDF1D522641AA700973DCE /* BarParametersViewController.swift */; };
 		35E29031224ED05900AFBF2F /* categoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E29030224ED05900AFBF2F /* categoriesTableViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350C3064226929AD00434A88 /* nearByViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nearByViewController.swift; sourceTree = "<group>"; };
+		350C306622692CC300434A88 /* nearByCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nearByCell.swift; sourceTree = "<group>"; };
 		3566E0DF224C2821007D49D9 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		35CDF1D522641AA700973DCE /* BarParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarParametersViewController.swift; sourceTree = "<group>"; };
 		35E29030224ED05900AFBF2F /* categoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				536FBA31225C0C4E00D1D68F /* ChosenViewController.swift */,
+				350C3064226929AD00434A88 /* nearByViewController.swift */,
+				350C306622692CC300434A88 /* nearByCell.swift */,
 				35CDF1D4226419EF00973DCE /* Bars */,
 				53D569A7225454DD00D110E5 /* Food */,
 				35E29030224ED05900AFBF2F /* categoriesTableViewController.swift */,
@@ -286,8 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5330AE7D224C267500010956 /* Business.swift in Sources */,
+				350C306722692CC300434A88 /* nearByCell.swift in Sources */,
 				35E50B9E224EAEE0007DC038 /* FoodCell.swift in Sources */,
 				536FBA34225ED12400D1D68F /* FoodParametersViewController.swift in Sources */,
+				350C3065226929AD00434A88 /* nearByViewController.swift in Sources */,
 				35CDF1D622641AA700973DCE /* BarParametersViewController.swift in Sources */,
 				5335C389225027E600683B7B /* HomeViewController.swift in Sources */,
 				EAE2A4A2224C27DF0012A4C5 /* UserLocation.swift in Sources */,

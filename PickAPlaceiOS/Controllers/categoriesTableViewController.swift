@@ -153,7 +153,6 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
             let cellBusiness = chooseDestination()
             let chosenViewController = segue.destination as! ChosenViewController
             chosenViewController.business = cellBusiness
-            
         }
         else {
             // Get the new view controller using segue.destination.
