@@ -16,7 +16,7 @@ struct Business: Codable {
     let price: String?
     let url: String
     let location: Location
-    let coord: BusinessCoordinate
+    let coordinates: BusinessCoordinate
     let distance: Double
 }
 
