@@ -16,6 +16,13 @@ struct Business: Codable {
     let price: String?
     let url: String
     let location: Location
+    let coord: BusinessCoordinate
+    let distance: Double
+}
+
+struct BusinessCoordinate: Codable {
+    let longitude: Double
+    let latitude: Double
 }
 
 // May need to refactor this into a seperate file
