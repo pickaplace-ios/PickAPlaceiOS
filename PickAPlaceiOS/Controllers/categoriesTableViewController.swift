@@ -116,8 +116,9 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         cell.business = business
         cell.restaurantNameLabel.text = business.name
         let imageURL = URL(string: business.image_url)
-        cell.restaurantImage.af_setImage(withURL: imageURL!)
-        
+        if imageURL != nil {
+            cell.restaurantImage.af_setImage(withURL: imageURL!)
+        }
         return cell
     }
     
