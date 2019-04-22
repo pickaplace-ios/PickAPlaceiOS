@@ -97,6 +97,14 @@
                                     <segue destination="MVj-Qh-Tkb" kind="show" id="h4P-xP-TfS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFx-Fy-oer">
+                                <rect key="frame" x="189" y="645" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Store"/>
+                                <connections>
+                                    <segue destination="diP-rW-R7B" kind="show" id="VhU-xg-jNJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -121,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcH-VM-ISP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="553"/>
+            <point key="canvasLocation" x="374" y="505"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="rWZ-6x-lz5">
@@ -284,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VK-Qp-gjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="3435"/>
+            <point key="canvasLocation" x="774" y="3486"/>
         </scene>
         <!--Chosen View Controller-->
         <scene sceneID="637-YF-YZT">
@@ -311,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fy0-au-QCV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="4156"/>
+            <point key="canvasLocation" x="774" y="4186"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="iwb-DS-Qtp">
@@ -369,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gL-yj-rFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="3435"/>
+            <point key="canvasLocation" x="1571" y="3485"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="raJ-nP-Whg">
@@ -388,7 +396,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEa-an-A1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="-283"/>
+            <point key="canvasLocation" x="374" y="-277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c9a-Gc-8cc">
@@ -444,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u8q-fm-6JZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="1994"/>
+            <point key="canvasLocation" x="374" y="1994"/>
         </scene>
         <!--Bar Parameters View Controller-->
         <scene sceneID="Aqy-gR-sfn">
@@ -482,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyw-ij-VKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="1994"/>
+            <point key="canvasLocation" x="2149" y="1994"/>
         </scene>
         <!--User Radius View Controller-->
         <scene sceneID="tox-tS-qIQ">
@@ -553,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oca-vn-GgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="2723"/>
+            <point key="canvasLocation" x="774" y="2796"/>
         </scene>
         <!--Food Parameters View Controller-->
         <scene sceneID="YUQ-uc-uNo">
@@ -622,6 +630,44 @@
             </objects>
             <point key="canvasLocation" x="-433" y="1994"/>
         </scene>
+        <!--Store Parameter View Controller-->
+        <scene sceneID="9sO-7V-U1S">
+            <objects>
+                <viewController id="KMa-vd-0vz" customClass="StoreParameterViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bGt-A4-fIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jcp-OZ-Mal">
+                                <rect key="frame" x="147" y="207" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRy-Li-5KY">
+                                <rect key="frame" x="184" y="587" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submit:" destination="KMa-vd-0vz" eventType="touchUpInside" id="FNX-Gs-mLw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="X8F-0d-c7h"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VyM-fc-6aM"/>
+                    <connections>
+                        <outlet property="priceSegControl" destination="Jcp-OZ-Mal" id="cll-fm-j4b"/>
+                        <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="uVA-q7-KVS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddp-1g-cCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="1994"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="B2k-9c-eg6">
             <objects>
@@ -638,7 +684,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="995-Ie-Jni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1701" y="1278"/>
+            <point key="canvasLocation" x="2148" y="1278"/>
         </scene>
         <!--View-->
         <scene sceneID="2bW-I3-zS7">
@@ -675,7 +721,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZmT-Du-Xwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="1278"/>
+            <point key="canvasLocation" x="374" y="1278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G29-pv-h6F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="diP-rW-R7B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WbU-YT-mIb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KMa-vd-0vz" kind="relationship" relationship="rootViewController" id="L13-74-bcx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EqD-kv-2Em" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="1278"/>
         </scene>
     </scenes>
     <resources>
@@ -685,6 +749,6 @@
         <image name="restaurant selection image" width="291" height="173"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zhQ-5Q-jpS"/>
+        <segue reference="uVA-q7-KVS"/>
     </inferredMetricsTieBreakers>
 </document>
