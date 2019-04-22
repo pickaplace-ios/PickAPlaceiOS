@@ -16,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var window: UIWindow?
     let locationManager = CLLocationManager()
     let alertController = UIAlertController(title: "Error", message: "There was a problem retrieving the location. Please make sure that location services are enabled.", preferredStyle: .alert)
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-        // handle cancel response here. Doing nothing will dismiss the view.
-    }
     let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
     }
 
@@ -41,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        alertController.addAction(cancelAction)
         alertController.addAction(OKAction)
         determineMyCurrentLocation()
         
