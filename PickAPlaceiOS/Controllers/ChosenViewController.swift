@@ -32,16 +32,15 @@ class ChosenViewController: UIViewController {
     }
     
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func textFriends(_ sender: Any) {
+        let name = business.name
+        let sms: String = "sms:&body=Hey! Let's go to \(name)!"
+        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
     }
-    */
+
+    @IBAction func openInMaps(_ sender: Any) {
+        
+    }
 
 }
