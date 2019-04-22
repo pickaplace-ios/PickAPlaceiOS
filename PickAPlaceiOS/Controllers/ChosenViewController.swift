@@ -40,7 +40,20 @@ class ChosenViewController: UIViewController {
     }
 
     @IBAction func openInMaps(_ sender: Any) {
+        let latitude:CLLocationDegrees =  business.coordinates.latitude
+        let longitude:CLLocationDegrees =  business.coordinates.longitude
         
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "\(business.name)"
+        mapItem.openInMaps(launchOptions: options)
     }
 
 }
