@@ -12,6 +12,12 @@ import Alamofire
 
 class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FoodCellDelegate
  {
+    let alertController = UIAlertController(title: "Error", message: "Invalid Radius. Please input a new distance", preferredStyle: .alert)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        // handle cancel response here. Doing nothing will dismiss the view.
+    }
+    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+    }
     
     var businesses = [Business]();
     var radius = 0;
@@ -30,7 +36,8 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
                 chosen.append(cell)
             }
             else {
-                // popup alert here
+                
+                present(alertController, animated: true);
                 cell.deselectCell()
             }
         }
@@ -46,6 +53,9 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         tableView.delegate = self
         self.tableView.rowHeight = tableView.frame.height / 5
         self.retrieveBusinesses()
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(OKAction)
     }
 
     // MARK: - Table view data source
