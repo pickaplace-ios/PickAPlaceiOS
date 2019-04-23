@@ -12,7 +12,7 @@ import Alamofire
 
 class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FoodCellDelegate
  {
-    let alertController = UIAlertController(title: "Error", message: "Invalid Radius. Please input a new distance", preferredStyle: .alert)
+    let alertController = UIAlertController(title: "Error", message: "Invalid selection. Please select 3 locations", preferredStyle: .alert)
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
         // handle cancel response here. Doing nothing will dismiss the view.
     }
@@ -86,7 +86,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         
         print(url)
         
-        Alamofire.request(url, headers: ["Authorization": "API-KEY"]).responseJSON { (response) in
+        Alamofire.request(url, headers: ["Authorization": "IgLkvlfGTAh97o95QL1aCjSc9p2xPVD4IHe8mpE8aLdrp2LHnV1_x0IVcGuFWF2Jl46zK8tpMNYfYRIs0psT-grsZn0n791Cr7es3ghjzGOQdJp5jOLlrbs8hHW_XHYx"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return

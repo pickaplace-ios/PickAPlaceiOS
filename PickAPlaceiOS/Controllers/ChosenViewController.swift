@@ -54,6 +54,12 @@ class ChosenViewController: UIViewController {
         
         
         locationLabel.text = "\(business.location.address1), \(business.location.city), \(business.location.state)"
+        
+        let annotation = MKPointAnnotation()
+        let locationCoordinate = CLLocationCoordinate2D(latitude: business.coordinates.latitude, longitude: business.coordinates.longitude)
+        annotation.coordinate = locationCoordinate
+        annotation.title = business.name
+        mapView.addAnnotation(annotation)
     }
     
     func centerMapOnLocation(location: CLLocation) {
