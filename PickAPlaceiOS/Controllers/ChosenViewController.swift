@@ -11,7 +11,12 @@ import MapKit
 
 
 class ChosenViewController: UIViewController {
+    @IBOutlet weak var distanceLabel: UILabel!
     
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var restaurantImageView: UIImageView!
+    @IBOutlet weak var tintView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""), coordinates: BusinessCoordinate(longitude: 0.0, latitude: 0.0), distance: 0.0)
@@ -23,6 +28,32 @@ class ChosenViewController: UIViewController {
         nameLabel.text = business.name
         let initialLocation = CLLocation(latitude: business.coordinates.latitude, longitude: business.coordinates.longitude)
         centerMapOnLocation(location: initialLocation)
+        priceLabel.text = business.price
+        let imageURL = URL(string: business.image_url)
+        if imageURL != nil {
+            restaurantImageView.af_setImage(withURL: imageURL!)
+        }
+        let rectShape = CAShapeLayer()
+        
+        rectShape.bounds = self.restaurantImageView.frame
+        rectShape.position = self.restaurantImageView.center
+        rectShape.path = UIBezierPath(roundedRect: self.restaurantImageView.bounds,     byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 17, height: 17)).cgPath
+        
+        
+        self.restaurantImageView.layer.mask = rectShape
+        
+        let path = UIBezierPath(roundedRect: self.tintView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 17, height: 17))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.tintView.bounds
+        maskLayer.path = path.cgPath
+        self.tintView.layer.mask = maskLayer
+        
+        let dist = String(format: "%.2f", business.distance/1609)
+        
+        distanceLabel.text = "\(dist) mi"
+        
+        
+        locationLabel.text = "\(business.location.address1), \(business.location.city), \(business.location.state)"
     }
     
     func centerMapOnLocation(location: CLLocation) {
@@ -56,4 +87,10 @@ class ChosenViewController: UIViewController {
         mapItem.openInMaps(launchOptions: options)
     }
 
+    @IBAction func callBusiness(_ sender: Any) {
+        let start = business.phone.index(business.phone.startIndex, offsetBy: 1)
+        let call: String = "tel://\(business.phone[start..<business.phone.endIndex])"
+        print(call)
+        UIApplication.shared.open(URL.init(string: call)!, options: [:], completionHandler: nil)
+    }
 }

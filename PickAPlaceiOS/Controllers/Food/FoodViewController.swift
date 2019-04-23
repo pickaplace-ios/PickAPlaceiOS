@@ -20,7 +20,9 @@ class FoodViewController: UIViewController {
         restaurantNameLabel.text = business.name
         priceLabel.text = business.price
         let imageURL = URL(string: business.image_url)
-        restaurantImageView.af_setImage(withURL: imageURL!)
+        if imageURL != nil {
+            restaurantImageView.af_setImage(withURL: imageURL!)
+        }
         let rectShape = CAShapeLayer()
         
         rectShape.bounds = self.restaurantImageView.frame
