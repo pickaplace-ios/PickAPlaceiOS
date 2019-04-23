@@ -4,6 +4,8 @@
 <dict>
 	<key>LSApplicationQueriesSchema</key>
 	<array>
+		<string>yelp</string>
+		<string>tel:</string>
 		<string>sms:</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
