@@ -52,6 +52,13 @@ class FoodViewController: UIViewController {
     @IBOutlet weak var restaurantNameLabel: UILabel!        //label for restaurant name
     @IBOutlet weak var priceLabel: UILabel! //label for price
     
+    
+    @IBAction func openYelp(_ sender: Any) {
+        if let url = URL(string: business.url) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
