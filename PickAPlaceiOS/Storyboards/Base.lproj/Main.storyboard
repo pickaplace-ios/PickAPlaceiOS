@@ -52,34 +52,26 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NKt-2V-gH3">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6Az-Zy-Udx">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qf4-Vn-4j0">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aQs-SH-jej">
-                                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
@@ -567,6 +559,9 @@
                                 <state key="normal" title="Retreats" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseRetreat:" destination="7L6-vj-W8m" eventType="touchUpInside" id="5b8-dG-1aC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ry-eb-urg">
                                 <rect key="frame" x="151" y="481" width="113" height="88"/>
@@ -575,6 +570,9 @@
                                 <state key="normal" title="Resort" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseResort:" destination="7L6-vj-W8m" eventType="touchUpInside" id="bXj-TT-Mna"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5D-2r-NMk">
                                 <rect key="frame" x="20" y="481" width="113" height="88"/>
@@ -583,6 +581,9 @@
                                 <state key="normal" title="Guesthouse" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseGuest:" destination="7L6-vj-W8m" eventType="touchUpInside" id="l49-iJ-zyN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcw-au-Zzq">
                                 <rect key="frame" x="281" y="370" width="113" height="88"/>
@@ -591,6 +592,9 @@
                                 <state key="normal" title="Camp" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseCamp:" destination="7L6-vj-W8m" eventType="touchUpInside" id="JGx-53-Lb7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFS-JQ-4oU">
                                 <rect key="frame" x="151" y="370" width="113" height="88"/>
@@ -599,6 +603,9 @@
                                 <state key="normal" title="Hostels" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseHostels:" destination="7L6-vj-W8m" eventType="touchUpInside" id="C6w-9a-ofl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM7-jG-b24">
                                 <rect key="frame" x="20" y="370" width="113" height="88"/>
@@ -607,6 +614,9 @@
                                 <state key="normal" title="BnB" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseBnb:" destination="7L6-vj-W8m" eventType="touchUpInside" id="GdL-te-BMm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-X1-IDz">
                                 <rect key="frame" x="72" y="756" width="270" height="45"/>
@@ -641,7 +651,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="RKk-Fk-Thr"/>
                     <connections>
+                        <outlet property="bnbBtn" destination="gM7-jG-b24" id="z6W-vs-SbH"/>
+                        <outlet property="campBtn" destination="Mcw-au-Zzq" id="YQ3-Wa-6rr"/>
+                        <outlet property="guesthouseBtn" destination="N5D-2r-NMk" id="cRH-UX-kZm"/>
+                        <outlet property="hostelsBtn" destination="IFS-JQ-4oU" id="A9a-kR-wEr"/>
                         <outlet property="priceSegControl" destination="wfI-Z8-24M" id="NOF-xF-i45"/>
+                        <outlet property="resortBtn" destination="8ry-eb-urg" id="YGs-Xf-8kn"/>
+                        <outlet property="retreatsBtn" destination="tuB-YH-CKv" id="io3-wo-uwM"/>
                         <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="zhQ-5Q-jpS"/>
                     </connections>
                 </viewController>
@@ -682,6 +698,9 @@
                                 <state key="normal" title="Beach" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseBeach:" destination="fXY-E8-943" eventType="touchUpInside" id="BEl-AK-VZD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qna-zh-mL3">
                                 <rect key="frame" x="281" y="589" width="113" height="88"/>
@@ -690,6 +709,9 @@
                                 <state key="normal" title="Pub" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="choosePubs:" destination="fXY-E8-943" eventType="touchUpInside" id="loz-cM-eYy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuV-BS-cB7">
                                 <rect key="frame" x="20" y="477" width="113" height="88"/>
@@ -698,6 +720,9 @@
                                 <state key="normal" title="Dive" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseDive:" destination="fXY-E8-943" eventType="touchUpInside" id="RaA-ff-W6i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUi-6s-YOz">
                                 <rect key="frame" x="151" y="365" width="113" height="88"/>
@@ -706,6 +731,9 @@
                                 <state key="normal" title="Milkshake" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseMilkshake:" destination="fXY-E8-943" eventType="touchUpInside" id="Mh6-ga-fXD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHl-98-Il3">
                                 <rect key="frame" x="20" y="365" width="113" height="88"/>
@@ -714,6 +742,9 @@
                                 <state key="normal" title="Juice" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseJuice:" destination="fXY-E8-943" eventType="touchUpInside" id="HAb-nj-V9u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HQ-4S-R1t">
                                 <rect key="frame" x="20" y="589" width="113" height="88"/>
@@ -722,6 +753,9 @@
                                 <state key="normal" title="Wine" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseWine:" destination="fXY-E8-943" eventType="touchUpInside" id="Ydx-I4-RYD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12L-69-0DE">
                                 <rect key="frame" x="151" y="589" width="113" height="88"/>
@@ -730,6 +764,9 @@
                                 <state key="normal" title="Sports" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseSports:" destination="fXY-E8-943" eventType="touchUpInside" id="9gg-Fr-7fz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhn-UB-52Y">
                                 <rect key="frame" x="151" y="477" width="113" height="88"/>
@@ -738,6 +775,9 @@
                                 <state key="normal" title="Cigar" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseCigar:" destination="fXY-E8-943" eventType="touchUpInside" id="0gS-Xb-Xrf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1l-66-GJZ">
                                 <rect key="frame" x="281" y="477" width="113" height="88"/>
@@ -746,6 +786,9 @@
                                 <state key="normal" title="Cocktail" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseCocktail:" destination="fXY-E8-943" eventType="touchUpInside" id="XWu-pl-wPo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmV-0L-j0l">
                                 <rect key="frame" x="72" y="758" width="270" height="45"/>
@@ -773,7 +816,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="TKQ-dL-MRD"/>
                     <connections>
+                        <outlet property="beachBtn" destination="550-Mb-eZ4" id="X7e-hH-52a"/>
+                        <outlet property="cigarBtn" destination="dhn-UB-52Y" id="R01-ng-uPo"/>
+                        <outlet property="cocktailBtn" destination="J1l-66-GJZ" id="9I8-oL-i9Y"/>
+                        <outlet property="diveBtn" destination="WuV-BS-cB7" id="sbA-XQ-uhU"/>
+                        <outlet property="juiceBtn" destination="nHl-98-Il3" id="UXr-1W-U2n"/>
+                        <outlet property="milkshakeBtn" destination="uUi-6s-YOz" id="ukA-vI-IcZ"/>
                         <outlet property="priceSegControl" destination="Evx-SC-zJ1" id="1CO-Ve-BTH"/>
+                        <outlet property="pubBtn" destination="qna-zh-mL3" id="Ikc-D5-xwr"/>
+                        <outlet property="sportBtn" destination="12L-69-0DE" id="LSV-xV-J5r"/>
+                        <outlet property="wineBtn" destination="1HQ-4S-R1t" id="EDS-nd-C2F"/>
                         <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="0lz-Ma-KpT"/>
                     </connections>
                 </viewController>
@@ -863,6 +915,9 @@
                                 <state key="normal" title="BBQ" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseBBQ:" destination="4EB-CA-ik3" eventType="touchUpInside" id="apr-4g-g3o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjX-Lj-zDV">
                                 <rect key="frame" x="20" y="592" width="113" height="88"/>
@@ -871,6 +926,9 @@
                                 <state key="normal" title="Pizza" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="choosePizza:" destination="4EB-CA-ik3" eventType="touchUpInside" id="spH-46-jTS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXm-8b-esE">
                                 <rect key="frame" x="281" y="480" width="113" height="88"/>
@@ -879,6 +937,9 @@
                                 <state key="normal" title="Mexican" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseMexican:" destination="4EB-CA-ik3" eventType="touchUpInside" id="erX-ao-s2B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siY-Nc-iBE">
                                 <rect key="frame" x="151" y="480" width="113" height="88"/>
@@ -887,6 +948,9 @@
                                 <state key="normal" title="Indian" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseIndian:" destination="4EB-CA-ik3" eventType="touchUpInside" id="gLu-Ev-gVB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5po-g7-yTT">
                                 <rect key="frame" x="20" y="480" width="113" height="88"/>
@@ -895,6 +959,9 @@
                                 <state key="normal" title="Seafood" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseSeafood:" destination="4EB-CA-ik3" eventType="touchUpInside" id="gYE-Mr-mv5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqh-We-fa7">
                                 <rect key="frame" x="281" y="368" width="113" height="88"/>
@@ -903,6 +970,9 @@
                                 <state key="normal" title="Italian" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseItalian:" destination="4EB-CA-ik3" eventType="touchUpInside" id="G6h-et-t2v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAk-Zv-mUv">
                                 <rect key="frame" x="151" y="368" width="113" height="88"/>
@@ -911,6 +981,9 @@
                                 <state key="normal" title="Asian" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseAsian:" destination="4EB-CA-ik3" eventType="touchUpInside" id="Gc1-xX-1QQ"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ugh-z5-kn1">
                                 <rect key="frame" x="30" y="208" width="354" height="31"/>
@@ -933,6 +1006,9 @@
                                 <state key="normal" title="American" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseAmerican:" destination="4EB-CA-ik3" eventType="touchUpInside" id="frc-cp-sXw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRv-eN-Iqd">
                                 <rect key="frame" x="281" y="592" width="113" height="88"/>
@@ -941,6 +1017,9 @@
                                 <state key="normal" title="Hispanic" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseHispanic:" destination="4EB-CA-ik3" eventType="touchUpInside" id="OgK-Da-ANe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Much Are You Willing to Spend?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIt-WF-awc">
                                 <rect key="frame" x="0.0" y="116" width="414" height="61"/>
@@ -985,7 +1064,16 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="xSc-Q0-k2c"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="americanBtn" destination="us3-3I-XPC" id="oIs-l1-qbe"/>
+                        <outlet property="asianBtn" destination="SAk-Zv-mUv" id="tDj-Qb-6wT"/>
+                        <outlet property="bbqBtn" destination="Xuf-v5-K5D" id="oQL-QO-mhb"/>
+                        <outlet property="hispanicBtn" destination="ZRv-eN-Iqd" id="N3v-gu-UOq"/>
+                        <outlet property="indianBtn" destination="siY-Nc-iBE" id="XIJ-9b-cpP"/>
+                        <outlet property="italianBtn" destination="eqh-We-fa7" id="lwD-sX-QhM"/>
+                        <outlet property="mexicanBtn" destination="KXm-8b-esE" id="qfe-ab-H2D"/>
+                        <outlet property="pizzaBtn" destination="AjX-Lj-zDV" id="VXo-Td-ht7"/>
                         <outlet property="priceSegControl" destination="Ugh-z5-kn1" id="gPA-he-Afa"/>
+                        <outlet property="seafoodBtn" destination="5po-g7-yTT" id="RJT-C9-qmA"/>
                         <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="23a-gf-XN3"/>
                     </connections>
                 </viewController>
@@ -1039,6 +1127,9 @@
                                 <state key="normal" title="Thrift" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseThrift:" destination="KMa-vd-0vz" eventType="touchUpInside" id="NnC-en-cdI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pI9-US-ivy">
                                 <rect key="frame" x="20" y="477" width="113" height="88"/>
@@ -1047,6 +1138,9 @@
                                 <state key="normal" title="Drug" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseDrug:" destination="KMa-vd-0vz" eventType="touchUpInside" id="KP8-8R-gxO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4O-eq-l7g">
                                 <rect key="frame" x="20" y="365" width="113" height="88"/>
@@ -1055,6 +1149,9 @@
                                 <state key="normal" title="Videogames" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseVideogames:" destination="KMa-vd-0vz" eventType="touchUpInside" id="uDE-GT-qvC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-Be-RIB">
                                 <rect key="frame" x="151" y="477" width="113" height="88"/>
@@ -1063,6 +1160,9 @@
                                 <state key="normal" title="Shoes" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseShoe:" destination="KMa-vd-0vz" eventType="touchUpInside" id="3tK-AU-U0P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-Q6-qkK">
                                 <rect key="frame" x="281" y="477" width="113" height="88"/>
@@ -1071,6 +1171,9 @@
                                 <state key="normal" title="Outlet" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseOutlet:" destination="KMa-vd-0vz" eventType="touchUpInside" id="etG-MS-GKL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnn-e2-bYh">
                                 <rect key="frame" x="281" y="365" width="113" height="88"/>
@@ -1079,6 +1182,9 @@
                                 <state key="normal" title="Dept" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseDept:" destination="KMa-vd-0vz" eventType="touchUpInside" id="zZa-90-XkT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8h-l8-p5C">
                                 <rect key="frame" x="151" y="589" width="113" height="88"/>
@@ -1087,6 +1193,9 @@
                                 <state key="normal" title="Pet" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="choosePet:" destination="KMa-vd-0vz" eventType="touchUpInside" id="4EJ-IV-bPz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-3k-K2Q">
                                 <rect key="frame" x="281" y="589" width="113" height="88"/>
@@ -1095,6 +1204,9 @@
                                 <state key="normal" title="Clothing" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseFashion:" destination="KMa-vd-0vz" eventType="touchUpInside" id="1np-uy-sDX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-eG-yTU">
                                 <rect key="frame" x="151" y="365" width="113" height="88"/>
@@ -1103,6 +1215,9 @@
                                 <state key="normal" title="Books" backgroundImage="unselectedParameter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseBooks:" destination="KMa-vd-0vz" eventType="touchUpInside" id="abf-dB-WkY"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More Specifically:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogr-Tm-FLu">
                                 <rect key="frame" x="17" y="303" width="380" height="40"/>
@@ -1117,7 +1232,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="VyM-fc-6aM"/>
                     <connections>
+                        <outlet property="bookBtn" destination="xqg-eG-yTU" id="rMQ-vD-cQ2"/>
+                        <outlet property="deptBtn" destination="cnn-e2-bYh" id="n11-Y7-AZ6"/>
+                        <outlet property="drugBtn" destination="pI9-US-ivy" id="Vbg-F5-uJU"/>
+                        <outlet property="fashionBtn" destination="kJI-3k-K2Q" id="Yia-o4-79J"/>
+                        <outlet property="outletBtn" destination="8b8-Q6-qkK" id="YJ0-hk-bDN"/>
+                        <outlet property="petBtn" destination="o8h-l8-p5C" id="PjM-ab-V9J"/>
                         <outlet property="priceSegControl" destination="Jcp-OZ-Mal" id="cll-fm-j4b"/>
+                        <outlet property="shoeBtn" destination="6l3-Be-RIB" id="eUo-wy-atc"/>
+                        <outlet property="thriftBtn" destination="xBB-s8-Nlf" id="y1K-vN-vEg"/>
+                        <outlet property="videogameBtn" destination="A4O-eq-l7g" id="y21-o2-t3n"/>
                         <segue destination="AaQ-pb-RZF" kind="show" identifier="toRadius" id="uVA-q7-KVS"/>
                     </connections>
                 </viewController>
@@ -1150,6 +1274,7 @@
                     <tabBarItem key="tabBarItem" title="View" id="kOz-8w-Cdc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mLN-dd-vyD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1167,6 +1292,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MVj-Qh-Tkb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QCz-qA-8u9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
