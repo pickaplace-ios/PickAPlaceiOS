@@ -34,8 +34,8 @@ The user will select 3 of the 5 places where they would be interested in going a
 - [X] User can change search parameters
 - [ ] User can set favorites
 - [ ] User can ignore locations already visited
-- [ ] User can message friends the location from within the app
-- [ ] User can see a map and directions to the location
+- [X] User can message friends the chosen location
+- [X] User can see a map and get directions to the location
 - [ ] User can refresh recommendations
 - [ ] Add a better looking UI
 

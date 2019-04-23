@@ -10,6 +10,8 @@ import UIKit
 
 class FoodViewController: UIViewController {
     
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var tintView: UIView!
     var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""), coordinates: BusinessCoordinate(longitude: 0.0, latitude: 0.0), distance: 0.0)
 
     override func viewDidLoad() {
@@ -18,7 +20,29 @@ class FoodViewController: UIViewController {
         restaurantNameLabel.text = business.name
         priceLabel.text = business.price
         let imageURL = URL(string: business.image_url)
-        restaurantImageView.af_setImage(withURL: imageURL!)
+        if imageURL != nil {
+            restaurantImageView.af_setImage(withURL: imageURL!)
+        }
+        let rectShape = CAShapeLayer()
+        
+        rectShape.bounds = self.restaurantImageView.frame
+        rectShape.position = self.restaurantImageView.center
+        rectShape.path = UIBezierPath(roundedRect: self.restaurantImageView.bounds,     byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 17, height: 17)).cgPath
+        
+        
+        self.restaurantImageView.layer.mask = rectShape
+        
+        let path = UIBezierPath(roundedRect: self.tintView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 17, height: 17))
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = self.tintView.bounds
+        maskLayer.path = path.cgPath
+        self.tintView.layer.mask = maskLayer
+        
+        let dist = String(format: "%.2f", business.distance/1609)
+        
+        distanceLabel.text = "\(dist) mi"
+        
+        
         locationLabel.text = "\(business.location.address1), \(business.location.city), \(business.location.state)"
         
     }
