@@ -12,6 +12,12 @@ import Alamofire
 
 class categoriesTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FoodCellDelegate
  {
+    let alertController = UIAlertController(title: "Error", message: "Invalid selection. Please select 3 locations", preferredStyle: .alert)
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        // handle cancel response here. Doing nothing will dismiss the view.
+    }
+    let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+    }
     
     var businesses = [Business]();
     var radius = 0;
@@ -30,7 +36,8 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
                 chosen.append(cell)
             }
             else {
-                // popup alert here
+                
+                present(alertController, animated: true);
                 cell.deselectCell()
             }
         }
@@ -47,6 +54,9 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         self.tableView.rowHeight = tableView.frame.height / 5
         self.retrieveBusinesses()
         self.tableView.separatorStyle = .none
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(OKAction)
     }
 
     // MARK: - Table view data source
@@ -76,7 +86,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         
         print(url)
         
-        Alamofire.request(url, headers: ["Authorization": "API-KEY"]).responseJSON { (response) in
+        Alamofire.request(url, headers: ["Authorization": "IgLkvlfGTAh97o95QL1aCjSc9p2xPVD4IHe8mpE8aLdrp2LHnV1_x0IVcGuFWF2Jl46zK8tpMNYfYRIs0psT-grsZn0n791Cr7es3ghjzGOQdJp5jOLlrbs8hHW_XHYx"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return
