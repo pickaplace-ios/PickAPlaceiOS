@@ -46,6 +46,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         tableView.delegate = self
         self.tableView.rowHeight = tableView.frame.height / 5
         self.retrieveBusinesses()
+        self.tableView.separatorStyle = .none
     }
 
     // MARK: - Table view data source
@@ -60,13 +61,22 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         let baseURL = "https://api.yelp.com/v3/businesses/search?"
         let latitude = UserLocation.getLatitude()
         let longitude = UserLocation.getLongitude()
-        var url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)&distance=\(self.radius)"
+       
+        radius = radius * 1609
+        
+        if radius > 40000 {
+            radius = 40000
+        }
+        
+        var url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)&radius=\(self.radius)"
         
         for i in 0..<params.count {
             url = url + "&\(params[i])"
         }
         
-        Alamofire.request(url, headers: ["Authorization": "API-KEY"]).responseJSON { (response) in
+        print(url)
+        
+        Alamofire.request(url, headers: ["Authorization": "Bearer qTudr1OHb2yp_BLjG5-Ql3FtZUTLIGgOZZSCGt9ckkQkiB_h1-djmLJXusaPhZrR2FIHrNAsnhzg2oJZMHjNMmS_fpM4mmrjh88VmX5nNeSI3AXu5DI_2v372JbKW3Yx"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return
@@ -115,10 +125,14 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         
         cell.business = business
         cell.restaurantNameLabel.text = business.name
+        cell.selectionStyle = .none
+
+        /*
         let imageURL = URL(string: business.image_url)
         if imageURL != nil {
             cell.restaurantImage.af_setImage(withURL: imageURL!)
         }
+         */
         return cell
     }
     

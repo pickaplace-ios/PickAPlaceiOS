@@ -14,6 +14,7 @@ protocol FoodCellDelegate: class {
 
 class FoodCell: UITableViewCell {
     
+    @IBOutlet weak var checkBtn: UIButton!
     weak var delegate: FoodCellDelegate?
     
     var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""), coordinates: BusinessCoordinate(longitude: 0.0, latitude: 0.0), distance: 0.0)
@@ -24,18 +25,17 @@ class FoodCell: UITableViewCell {
     }
 
     @IBOutlet weak var restaurantNameLabel: UILabel!
-    @IBOutlet weak var restaurantImage: UIImageView!
     
     @IBAction func selectRestaurant(_ sender: Any) {
         delegate?.didselectRestaurant(cell: self)
     }
     
     func selectCell(){
-        self.contentView.backgroundColor = UIColor.lightGray;
+        checkBtn.setImage(UIImage(named:"CheckedBox"), for: .normal)
     }
     
     func deselectCell(){
-        self.contentView.backgroundColor = UIColor.white;
+        checkBtn.setImage(UIImage(named:"CheckboxEmpty"), for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

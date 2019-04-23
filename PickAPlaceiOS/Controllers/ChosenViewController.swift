@@ -12,8 +12,8 @@ import MapKit
 
 class ChosenViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""), coordinates: BusinessCoordinate(longitude: 0.0, latitude: 0.0), distance: 0.0)
     let regionRadius: CLLocationDistance = 1000
     
