@@ -22,6 +22,7 @@ class nearByViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.separatorStyle = .none
         self.retrieveBusinesses()
         self.tableView.rowHeight = tableView.frame.height / 5
     }
@@ -39,8 +40,12 @@ class nearByViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.business = business
         cell.nearByNameLabel.text = business.name
         let imageURL = URL(string: business.image_url)
-        cell.nearByImage.af_setImage(withURL: imageURL!)
-        cell.nearByRating.text = business.price
+        if imageURL != nil {
+            cell.nearByImage.af_setImage(withURL: imageURL!)
+        }
+        cell.nearByRating.text = "\(String(business.rating))/5"
+        cell.distanceLabel.text = "\(String(format: "%.2f", business.distance/1609)) mi"
+        cell.priceLabel.text = business.price
         return cell
     }
     
@@ -51,7 +56,7 @@ class nearByViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var url = "\(baseURL)latitude=\(latitude)&longitude=\(longitude)"
         
         
-        Alamofire.request(url, headers: ["Authorization": "Bearer qTudr1OHb2yp_BLjG5-Ql3FtZUTLIGgOZZSCGt9ckkQkiB_h1-djmLJXusaPhZrR2FIHrNAsnhzg2oJZMHjNMmS_fpM4mmrjh88VmX5nNeSI3AXu5DI_2v372JbKW3Yx"]).responseJSON { (response) in
+        Alamofire.request(url, headers: ["Authorization": "API-KEY"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return
@@ -70,6 +75,31 @@ class nearByViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print(error)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        // Identify selected movie cell
+        let cell = sender as! UITableViewCell
+        
+        // Gets the index of that cell because the tableview knows the index for a cell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let business = businesses[indexPath.row]
+        
+        // Identify the destination
+        // Must cast because the destination is a generic VC
+        let foodDetailViewController = segue.destination as! FoodViewController
+        
+        // Bundle the movie information to the next screen
+        
+        foodDetailViewController.business = business;
+        
+        // Deselect while traveling to the next screen
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 
