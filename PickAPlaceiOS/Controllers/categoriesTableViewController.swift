@@ -86,6 +86,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         
         print(url)
         
+
         Alamofire.request(url, headers: ["Authorization": "Bearer qTudr1OHb2yp_BLjG5-Ql3FtZUTLIGgOZZSCGt9ckkQkiB_h1-djmLJXusaPhZrR2FIHrNAsnhzg2oJZMHjNMmS_fpM4mmrjh88VmX5nNeSI3AXu5DI_2v372JbKW3Yx"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)

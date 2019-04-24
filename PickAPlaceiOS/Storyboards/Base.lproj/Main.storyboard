@@ -383,6 +383,9 @@
                                 <rect key="frame" x="75" y="700" width="270" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="yelpBtn"/>
+                                <connections>
+                                    <action selector="viewYelp:" destination="Dro-Y0-Hvd" eventType="touchUpInside" id="wpX-pp-B5D"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We chose..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="why-nW-UQQ">
                                 <rect key="frame" x="86" y="109" width="242" height="40"/>
@@ -479,6 +482,9 @@
                                 <rect key="frame" x="71" y="754" width="270" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="yelpBtn"/>
+                                <connections>
+                                    <action selector="openYelp:" destination="3Bd-am-SBr" eventType="touchUpInside" id="gg0-cT-5sj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
