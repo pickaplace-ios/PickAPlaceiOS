@@ -86,7 +86,7 @@ class categoriesTableViewController: UIViewController, UITableViewDataSource, UI
         
         print(url)
         
-        Alamofire.request(url, headers: ["Authorization": "IgLkvlfGTAh97o95QL1aCjSc9p2xPVD4IHe8mpE8aLdrp2LHnV1_x0IVcGuFWF2Jl46zK8tpMNYfYRIs0psT-grsZn0n791Cr7es3ghjzGOQdJp5jOLlrbs8hHW_XHYx"]).responseJSON { (response) in
+        Alamofire.request(url, headers: ["Authorization": "Bearer qTudr1OHb2yp_BLjG5-Ql3FtZUTLIGgOZZSCGt9ckkQkiB_h1-djmLJXusaPhZrR2FIHrNAsnhzg2oJZMHjNMmS_fpM4mmrjh88VmX5nNeSI3AXu5DI_2v372JbKW3Yx"]).responseJSON { (response) in
             if let error = response.error{
                 print(error.localizedDescription)
                 return
