@@ -145,4 +145,8 @@ class HotelsParameterViewController: UIViewController {
         vc.params = self.params
     }
 
+    @IBAction func backplease(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
 }

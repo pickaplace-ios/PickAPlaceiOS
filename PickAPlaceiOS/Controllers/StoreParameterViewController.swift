@@ -180,4 +180,7 @@ class StoreParameterViewController: UIViewController {
         vc.params = self.params
     }
 
+    @IBAction func backButton(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil) 
+    }
 }

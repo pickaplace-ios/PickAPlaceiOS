@@ -31,6 +31,7 @@ class BarParametersViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
     func grabPrice() {
         if (priceSegControl.selectedSegmentIndex == 0){
             params.append("price=1")
@@ -185,5 +186,8 @@ class BarParametersViewController: UIViewController {
         guard let vc = segue.destination as? UserRadiusViewController else {return}
         vc.params = self.params
     }
-
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil) 
+    }
 }
