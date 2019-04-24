@@ -99,4 +99,13 @@ class ChosenViewController: UIViewController {
         print(call)
         UIApplication.shared.open(URL.init(string: call)!, options: [:], completionHandler: nil)
     }
+    
+    
+    @IBAction func viewYelp(_ sender: Any) {
+        if let url = URL(string: business.url) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    
 }
