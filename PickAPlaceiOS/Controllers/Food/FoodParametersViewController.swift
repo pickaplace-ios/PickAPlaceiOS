@@ -181,4 +181,7 @@ class FoodParametersViewController: UIViewController {
     }
     
 
+    @IBAction func backButton(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil) 
+    }
 }
