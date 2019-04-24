@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import MapKit
 
 class FoodViewController: UIViewController {
+    @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var tintView: UIView!
+    let regionRadius: CLLocationDistance = 1000
+
     var business = Business(name: "", rating: 0.0, image_url: "", phone: "", price: "", url: "", location: Location(city: "", country: "", address1: "", address2: "", address3: "", state: "", zip_code: ""), coordinates: BusinessCoordinate(longitude: 0.0, latitude: 0.0), distance: 0.0)
 
     override func viewDidLoad() {
@@ -19,6 +23,14 @@ class FoodViewController: UIViewController {
         // Do any additional setup after loading the view.
         restaurantNameLabel.text = business.name
         priceLabel.text = business.price
+        ratingLabel.text = "\(String(business.rating))/5"
+        let initialLocation = CLLocation(latitude: business.coordinates.latitude, longitude: business.coordinates.longitude)
+        centerMapOnLocation(location: initialLocation)
+        let annotation = MKPointAnnotation()
+        let locationCoordinate = CLLocationCoordinate2D(latitude: business.coordinates.latitude, longitude: business.coordinates.longitude)
+        annotation.coordinate = locationCoordinate
+        annotation.title = business.name
+        mapView.addAnnotation(annotation)
         let imageURL = URL(string: business.image_url)
         if imageURL != nil {
             restaurantImageView.af_setImage(withURL: imageURL!)
@@ -51,12 +63,19 @@ class FoodViewController: UIViewController {
     @IBOutlet weak var restaurantImageView: UIImageView!    //image for restaurant
     @IBOutlet weak var restaurantNameLabel: UILabel!        //label for restaurant name
     @IBOutlet weak var priceLabel: UILabel! //label for price
+    @IBOutlet weak var ratingLabel: UILabel!
     
     
     @IBAction func openYelp(_ sender: Any) {
         if let url = URL(string: business.url) {
             UIApplication.shared.open(url, options: [:])
         }
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     /*

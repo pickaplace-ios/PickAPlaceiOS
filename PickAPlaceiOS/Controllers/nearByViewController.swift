@@ -20,6 +20,8 @@ class nearByViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = true
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.separatorStyle = .none

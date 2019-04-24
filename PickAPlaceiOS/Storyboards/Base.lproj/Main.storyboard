@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dUe-wg-Cpa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dUe-wg-Cpa">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="1284.0579710144928" y="504.91071428571428"/>
         </scene>
-        <!--Nearby-->
+        <!--Near By View Controller-->
         <scene sceneID="rWZ-6x-lz5">
             <objects>
                 <viewController id="esg-c7-A27" customClass="nearByViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,10 +210,10 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iop-ym-jQm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Nearby" id="mQZ-EO-RoO"/>
+                    <navigationItem key="navigationItem" id="mQZ-EO-RoO"/>
                     <connections>
                         <outlet property="tableView" destination="Azr-l9-BmU" id="WF7-dH-mfB"/>
                     </connections>
@@ -222,10 +222,10 @@
             </objects>
             <point key="canvasLocation" x="-1417.3913043478262" y="1277.6785714285713"/>
         </scene>
-        <!--Categories-->
+        <!--Choose Your Three-->
         <scene sceneID="aGD-eO-1Uz">
             <objects>
-                <viewController title="Categories" id="3e3-Fm-nMs" customClass="categoriesTableViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Choose Your Three" id="3e3-Fm-nMs" customClass="categoriesTableViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DjI-0S-hC3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -405,7 +405,17 @@
                                 <rect key="frame" x="75" y="806" width="270" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="BackToHomeBtn"/>
+                                <connections>
+                                    <action selector="goHome:" destination="Dro-Y0-Hvd" eventType="touchUpInside" id="GL6-Cy-tZX"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbh-p6-Cug">
+                                <rect key="frame" x="310" y="403" width="67" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="19"/>
+                                <color key="textColor" red="0.99999719860000003" green="0.9999815822" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="m40-Gd-yOj"/>
@@ -416,8 +426,10 @@
                         <outlet property="mapView" destination="9Ip-yP-b8L" id="Msj-oD-5n6"/>
                         <outlet property="nameLabel" destination="ILk-ht-5K7" id="xfV-Ga-T5q"/>
                         <outlet property="priceLabel" destination="hMh-Na-RLe" id="ZEf-4D-Ly5"/>
+                        <outlet property="ratingLabel" destination="Mbh-p6-Cug" id="ubt-GY-AEs"/>
                         <outlet property="restaurantImageView" destination="fWH-6e-hGb" id="2lV-I1-qZc"/>
                         <outlet property="tintView" destination="7KD-oO-YgJ" id="BLD-ZY-jFm"/>
+                        <segue destination="dUe-wg-Cpa" kind="show" identifier="goHome" id="bdt-4h-rrj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fy0-au-QCV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -427,7 +439,7 @@
         <!--Food View Controller-->
         <scene sceneID="iwb-DS-Qtp">
             <objects>
-                <viewController title="Food View Controller" id="3Bd-am-SBr" customClass="FoodViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Bd-am-SBr" customClass="FoodViewController" customModule="PickAPlaceiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TCe-yH-dYw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -470,6 +482,13 @@
                                 <rect key="frame" x="27" y="351" width="361" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9f-KT-YSa">
+                                <rect key="frame" x="310" y="368" width="67" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="19"/>
+                                <color key="textColor" red="0.99999719860000003" green="0.9999815822" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="right" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qd-oK-fV3">
                                 <rect key="frame" x="36" y="368" width="52" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -485,6 +504,10 @@
                                     <action selector="openYelp:" destination="3Bd-am-SBr" eventType="touchUpInside" id="gg0-cT-5sj"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="y1Y-Aw-cKj">
+                                <rect key="frame" x="27" y="412" width="361" height="279"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4RM-2K-Svp"/>
@@ -492,7 +515,9 @@
                     <connections>
                         <outlet property="distanceLabel" destination="tou-Ma-1YB" id="Lgl-IS-L1d"/>
                         <outlet property="locationLabel" destination="nxt-dZ-RTu" id="cMB-eE-2fa"/>
+                        <outlet property="mapView" destination="y1Y-Aw-cKj" id="bAu-vf-xTf"/>
                         <outlet property="priceLabel" destination="4Qd-oK-fV3" id="gKp-89-87D"/>
+                        <outlet property="ratingLabel" destination="d9f-KT-YSa" id="DQy-7h-YEi"/>
                         <outlet property="restaurantImageView" destination="QCV-BZ-Gr8" id="Nya-Eg-nD9"/>
                         <outlet property="restaurantNameLabel" destination="Yed-fb-qK4" id="h2t-eK-QHk"/>
                         <outlet property="tintView" destination="Sej-Cd-IVl" id="AJe-DE-Owd"/>
@@ -500,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gL-yj-rFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1438" y="2857"/>
+            <point key="canvasLocation" x="-1439.1304347826087" y="2856.6964285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="raJ-nP-Whg">
@@ -873,7 +898,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How far do you want to travel?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2l-wx-bUV">
-                                <rect key="frame" x="0.0" y="384" width="414" height="103"/>
+                                <rect key="frame" x="0.0" y="335" width="414" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -891,17 +916,12 @@
                                     <action selector="submitRadius:" destination="AaQ-pb-RZF" eventType="touchUpInside" id="mqe-WO-HzN"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-hJ-vo0">
-                                <rect key="frame" x="87" y="633" width="240" height="11"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.97122210259999997" green="0.81714159249999996" blue="0.32140576840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="FCb-X1-CtB">
-                                <rect key="frame" x="51" y="152" width="312" height="220"/>
+                                <rect key="frame" x="51" y="107" width="312" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="in miles" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsL-m8-gh7">
-                                <rect key="frame" x="87" y="595" width="240" height="30"/>
+                                <rect key="frame" x="87" y="446" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -909,6 +929,11 @@
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert"/>
                             </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-hJ-vo0">
+                                <rect key="frame" x="87" y="484" width="240" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97122210259999997" green="0.81714159249999996" blue="0.32140576840000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VlM-HP-bOd"/>
@@ -1314,11 +1339,11 @@
             </objects>
             <point key="canvasLocation" x="2148" y="1278"/>
         </scene>
-        <!--View-->
+        <!--Nearby-->
         <scene sceneID="2bW-I3-zS7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tPu-gN-728" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="View" id="kOz-8w-Cdc"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="nearby" selectedImage="nearby" id="kOz-8w-Cdc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mLN-dd-vyD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1369,11 +1394,11 @@
             </objects>
             <point key="canvasLocation" x="1219" y="1278"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="xZh-TA-6gS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qzY-T1-gOR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GHf-EE-ZCd"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="GHf-EE-ZCd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="puf-0J-vBi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1403,13 +1428,15 @@
         <image name="YellowBottom" width="335" height="66"/>
         <image name="background" width="375" height="812"/>
         <image name="callBtn" width="270" height="45"/>
+        <image name="home" width="26" height="29"/>
         <image name="logo" width="222" height="222"/>
+        <image name="nearby" width="36" height="19"/>
         <image name="textFriendsBtn" width="270" height="45"/>
         <image name="unselectedParameter" width="113" height="88"/>
         <image name="yelpBtn" width="270" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0lz-Ma-KpT"/>
-        <segue reference="rgu-YC-m2G"/>
+        <segue reference="llz-U0-4Sm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -25,6 +25,8 @@ class ChosenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        ratingLabel.text = "\(String(business.rating))/5"
         nameLabel.text = business.name
         let initialLocation = CLLocation(latitude: business.coordinates.latitude, longitude: business.coordinates.longitude)
         centerMapOnLocation(location: initialLocation)
@@ -51,6 +53,8 @@ class ChosenViewController: UIViewController {
         let dist = String(format: "%.2f", business.distance/1609)
         
         distanceLabel.text = "\(dist) mi"
+        
+        
         
         
         locationLabel.text = "\(business.location.address1), \(business.location.city), \(business.location.state)"
@@ -100,12 +104,16 @@ class ChosenViewController: UIViewController {
         UIApplication.shared.open(URL.init(string: call)!, options: [:], completionHandler: nil)
     }
     
+    @IBOutlet weak var ratingLabel: UILabel!
     
     @IBAction func viewYelp(_ sender: Any) {
         if let url = URL(string: business.url) {
             UIApplication.shared.open(url, options: [:])
         }
+        
     }
     
-    
+    @IBAction func goHome(_ sender: Any) {
+        self.performSegue(withIdentifier: "goHome", sender: nil)
+    }
 }

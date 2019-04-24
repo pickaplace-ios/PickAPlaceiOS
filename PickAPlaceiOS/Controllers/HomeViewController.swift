@@ -14,6 +14,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.hidesBackButton = true
+        self.navigationItem.hidesBackButton = true
         print(UserLocation.getLongitude())
 
         // Do any additional setup after loading the view.
