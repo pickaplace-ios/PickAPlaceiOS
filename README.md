@@ -108,6 +108,9 @@ Businesses
 ### Progress GIFs
 <img src='https://github.com/pickaplace-ios/PickAPlaceiOS/blob/master/PickAPlaceiOSP1.gif?raw=true' title='PickAPlace Walkthrough' width='' alt='Video Walkthrough' />
 
+### Final GIFs
+<img src='https://github.com/pickaplace-ios/PickAPlaceiOS' />
+
 ---
 
 ### App Pitch Presentation
