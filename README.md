@@ -109,7 +109,7 @@ Businesses
 <img src='https://github.com/pickaplace-ios/PickAPlaceiOS/blob/master/PickAPlaceiOSP1.gif?raw=true' title='PickAPlace Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Final GIFs
-<img src='https://github.com/pickaplace-ios/PickAPlaceiOS' />
+<img src='https://imgur.com/F5NhEJY.gif' />
 
 ---
 
